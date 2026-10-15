@@ -2,7 +2,7 @@
  "weeks": [
   {
    "date": "2026-10-15",
-   "n_calls": 294,
+   "n_calls": 343,
    "n_errors": 0,
    "engines": {
     "chatgpt": {
@@ -201,6 +201,205 @@
       [
        "cryptobriefing.com",
        5
+      ]
+     ]
+    },
+    "google_aio": {
+     "runs": 49,
+     "aio_present_rate": 100.0,
+     "own_citation_rate": 10.2,
+     "own_target_hit_rate": 2.0,
+     "own_citation_share": 3.1,
+     "own_mention_rate": 0.0,
+     "own_avg_position": 1.6,
+     "brands": [
+      {
+       "brand": "yahoofinance",
+       "label": "Yahoo Finance",
+       "citation_rate": 32.7,
+       "citation_share": 7.3,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "defillama",
+       "label": "DefiLlama",
+       "citation_rate": 18.4,
+       "citation_share": 5.6,
+       "mention_rate": 4.1
+      },
+      {
+       "brand": "coingecko",
+       "label": "CoinGecko",
+       "citation_rate": 14.3,
+       "citation_share": 2.8,
+       "mention_rate": 4.1
+      },
+      {
+       "brand": "theblock",
+       "label": "The Block",
+       "citation_rate": 10.2,
+       "citation_share": 3.1,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "coinmarketcap",
+       "label": "CoinMarketCap",
+       "citation_rate": 10.2,
+       "citation_share": 2.1,
+       "mention_rate": 2.0
+      },
+      {
+       "brand": "kucoin",
+       "label": "KuCoin News",
+       "citation_rate": 10.2,
+       "citation_share": 2.4,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "coindesk",
+       "label": "CoinDesk",
+       "citation_rate": 6.1,
+       "citation_share": 1.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "bitcointreasuries",
+       "label": "BitcoinTreasuries",
+       "citation_rate": 4.1,
+       "citation_share": 0.7,
+       "mention_rate": 6.1
+      },
+      {
+       "brand": "glassnode",
+       "label": "Glassnode",
+       "citation_rate": 2.0,
+       "citation_share": 0.3,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "coinglass",
+       "label": "CoinGlass",
+       "citation_rate": 2.0,
+       "citation_share": 0.3,
+       "mention_rate": 2.0
+      },
+      {
+       "brand": "sosovalue",
+       "label": "SoSoValue",
+       "citation_rate": 2.0,
+       "citation_share": 0.3,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "decrypt",
+       "label": "Decrypt",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "beincrypto",
+       "label": "BeInCrypto",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "cointelegraph",
+       "label": "Cointelegraph",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "dune",
+       "label": "Dune",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "kaiko",
+       "label": "Kaiko",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "artemis",
+       "label": "Artemis",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      },
+      {
+       "brand": "farside",
+       "label": "Farside",
+       "citation_rate": 0.0,
+       "citation_share": 0.0,
+       "mention_rate": 0.0
+      }
+     ],
+     "top_domains": [
+      [
+       "finance.yahoo.com",
+       17
+      ],
+      [
+       "www.youtube.com",
+       16
+      ],
+      [
+       "defillama.com",
+       16
+      ],
+      [
+       "www.theblock.co",
+       9
+      ],
+      [
+       "www.coingecko.com",
+       8
+      ],
+      [
+       "tokenterminal.com",
+       8
+      ],
+      [
+       "www.kucoin.com",
+       7
+      ],
+      [
+       "www.binance.com",
+       7
+      ],
+      [
+       "coinmarketcap.com",
+       6
+      ],
+      [
+       "bitbo.io",
+       5
+      ],
+      [
+       "x.com",
+       5
+      ],
+      [
+       "bitcoinfoundation.org",
+       5
+      ],
+      [
+       "www.spark.money",
+       5
+      ],
+      [
+       "finance.biggo.com",
+       4
+      ],
+      [
+       "pluang.com",
+       4
       ]
      ]
     },
@@ -406,35 +605,35 @@
    },
    "topics": {
     "alternative": {
-     "runs": 36,
-     "own_citation_rate": 33.3
+     "runs": 42,
+     "own_citation_rate": 31.0
     },
     "defi": {
-     "runs": 42,
-     "own_citation_rate": 11.9
+     "runs": 49,
+     "own_citation_rate": 14.3
     },
     "etfs": {
-     "runs": 42,
+     "runs": 49,
      "own_citation_rate": 14.3
     },
     "markets": {
-     "runs": 42,
-     "own_citation_rate": 4.8
+     "runs": 49,
+     "own_citation_rate": 4.1
     },
     "nfts": {
-     "runs": 12,
+     "runs": 14,
      "own_citation_rate": 0.0
     },
     "onchain": {
-     "runs": 60,
-     "own_citation_rate": 5.0
+     "runs": 70,
+     "own_citation_rate": 4.3
     },
     "stablecoins": {
-     "runs": 30,
-     "own_citation_rate": 3.3
+     "runs": 35,
+     "own_citation_rate": 2.9
     },
     "treasuries": {
-     "runs": 30,
+     "runs": 35,
      "own_citation_rate": 20.0
     }
    },
@@ -451,6 +650,15 @@
       "competitors": [
        "Yahoo Finance"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "KuCoin News",
+       "SoSoValue",
+       "Yahoo Finance"
+      ]
      }
     },
     "etf-02": {
@@ -462,6 +670,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -478,6 +691,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "KuCoin News"
+      ]
      }
     },
     "etf-04": {
@@ -489,6 +709,13 @@
      "perplexity": {
       "own_cited": 3,
       "of": 3,
+      "competitors": [
+       "Yahoo Finance"
+      ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": [
        "Yahoo Finance"
       ]
@@ -509,6 +736,13 @@
       "competitors": [
        "Yahoo Finance"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "etf-06": {
@@ -521,6 +755,14 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinDesk",
+       "KuCoin News"
+      ]
      }
     },
     "etf-07": {
@@ -534,6 +776,14 @@
       "of": 3,
       "competitors": [
        "CoinMarketCap"
+      ]
+     },
+     "google_aio": {
+      "own_cited": 1,
+      "of": 1,
+      "competitors": [
+       "CoinMarketCap",
+       "Yahoo Finance"
       ]
      }
     },
@@ -553,6 +803,11 @@
        "CoinGecko",
        "Yahoo Finance"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "tre-02": {
@@ -569,6 +824,11 @@
       "competitors": [
        "CoinGecko"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "tre-03": {
@@ -583,6 +843,13 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": [
+       "CoinGecko"
+      ]
+     },
+     "google_aio": {
+      "own_cited": 1,
+      "of": 1,
       "competitors": [
        "CoinGecko"
       ]
@@ -602,6 +869,15 @@
       "competitors": [
        "CoinGecko"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "BitcoinTreasuries",
+       "CoinGecko",
+       "Yahoo Finance"
+      ]
      }
     },
     "tre-05": {
@@ -617,6 +893,15 @@
       "of": 3,
       "competitors": [
        "CoinMarketCap"
+      ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "BitcoinTreasuries",
+       "CoinMarketCap",
+       "KuCoin News"
       ]
      }
     },
@@ -636,6 +921,14 @@
       "competitors": [
        "CoinMarketCap"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinMarketCap",
+       "DefiLlama"
+      ]
      }
     },
     "stb-02": {
@@ -652,6 +945,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "DefiLlama"
+      ]
      }
     },
     "stb-03": {
@@ -667,6 +967,15 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinDesk",
+       "DefiLlama",
+       "Yahoo Finance"
+      ]
      }
     },
     "stb-04": {
@@ -683,6 +992,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "DefiLlama"
+      ]
      }
     },
     "stb-05": {
@@ -697,6 +1013,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -717,6 +1038,14 @@
        "CoinDesk",
        "CoinMarketCap"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinGecko",
+       "CoinMarketCap"
+      ]
      }
     },
     "mkt-02": {
@@ -735,6 +1064,11 @@
       "competitors": [
        "CoinDesk"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "mkt-03": {
@@ -751,6 +1085,11 @@
       "competitors": [
        "CoinGlass"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "mkt-04": {
@@ -763,6 +1102,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinGlass"
+      ]
      }
     },
     "mkt-05": {
@@ -775,6 +1121,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "mkt-06": {
@@ -786,6 +1139,11 @@
      "perplexity": {
       "own_cited": 2,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -803,6 +1161,13 @@
       "competitors": [
        "Yahoo Finance"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "onc-01": {
@@ -817,6 +1182,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Glassnode"
+      ]
      }
     },
     "onc-02": {
@@ -830,6 +1202,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -847,6 +1224,13 @@
       "competitors": [
        "Yahoo Finance"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "onc-04": {
@@ -861,6 +1245,11 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "onc-05": {
@@ -873,6 +1262,11 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "onc-06": {
@@ -884,6 +1278,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -901,6 +1300,14 @@
       "competitors": [
        "CoinGecko"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinGecko",
+       "Yahoo Finance"
+      ]
      }
     },
     "onc-08": {
@@ -916,6 +1323,11 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": []
      }
     },
     "onc-09": {
@@ -930,6 +1342,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "DefiLlama"
+      ]
      }
     },
     "onc-10": {
@@ -948,6 +1367,13 @@
       "competitors": [
        "CoinDesk"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "dfi-01": {
@@ -962,6 +1388,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 1,
+      "of": 1,
+      "competitors": [
+       "DefiLlama"
+      ]
      }
     },
     "dfi-02": {
@@ -977,6 +1410,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 1,
+      "of": 1,
+      "competitors": [
+       "CoinGecko"
+      ]
      }
     },
     "dfi-03": {
@@ -991,6 +1431,14 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "DefiLlama",
+       "KuCoin News"
+      ]
      }
     },
     "dfi-04": {
@@ -1003,6 +1451,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "dfi-05": {
@@ -1018,6 +1473,14 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinDesk",
+       "Yahoo Finance"
+      ]
      }
     },
     "dfi-06": {
@@ -1032,6 +1495,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "DefiLlama"
+      ]
      }
     },
     "dfi-07": {
@@ -1047,6 +1517,14 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinGecko",
+       "DefiLlama"
+      ]
      }
     },
     "nft-01": {
@@ -1058,6 +1536,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -1077,6 +1560,13 @@
        "CoinDesk",
        "CoinGecko"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinGecko"
+      ]
      }
     },
     "alt-01": {
@@ -1089,6 +1579,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "alt-02": {
@@ -1106,6 +1603,13 @@
       "competitors": [
        "CoinGecko"
       ]
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     },
     "alt-03": {
@@ -1118,6 +1622,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "CoinMarketCap"
+      ]
      }
     },
     "alt-04": {
@@ -1130,6 +1641,11 @@
       "own_cited": 3,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 1,
+      "of": 1,
+      "competitors": []
      }
     },
     "alt-05": {
@@ -1141,6 +1657,11 @@
      "perplexity": {
       "own_cited": 0,
       "of": 3,
+      "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
       "competitors": []
      }
     },
@@ -1156,6 +1677,13 @@
       "own_cited": 0,
       "of": 3,
       "competitors": []
+     },
+     "google_aio": {
+      "own_cited": 0,
+      "of": 1,
+      "competitors": [
+       "Yahoo Finance"
+      ]
      }
     }
    }
