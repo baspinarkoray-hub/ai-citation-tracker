@@ -1,0 +1,64 @@
+name: Weekly AI citation run
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # every Monday 06:17 UTC (08:17 Madrid)
+  workflow_dispatch:
+    inputs:
+      engines:
+        description: "Comma list: chatgpt,perplexity,google_aio"
+        default: "chatgpt,perplexity,google_aio"
+      limit:
+        description: "Only first N prompts (0 = all)"
+        default: "0"
+      repeats:
+        description: "Runs per prompt"
+        default: "3"
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - name: Run engines
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: >
+          python -m tracker.run
+          --engines "${{ inputs.engines || 'chatgpt,perplexity,google_aio' }}"
+          --limit "${{ inputs.limit || '0' }}"
+          --repeats "${{ inputs.repeats || '3' }}"
+      - name: Build report
+        run: python -m tracker.report | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        run: |
+          git config user.name "ai-citation-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data reports
+          git commit -m "AI citation run $(date -u +%F)" || echo "nothing to commit"
+          git push
+      - name: Notify Make (optional)
+        if: ${{ env.MAKE_WEBHOOK_URL != '' }}
+        run: |
+          python - <<'EOF'
+          import json, os, requests
+          s = json.load(open("data/summary.json"))["weeks"][-1]
+          payload = {"date": s["date"], "engines": {k: {kk: v[kk] for kk in
+                     ("own_citation_rate","own_citation_share","own_mention_rate","own_target_hit_rate")}
+                     for k, v in s["engines"].items()},
+                     "report_url": f"https://github.com/${{ github.repository }}/blob/main/reports/{s['date']}.md"}
+          requests.post(os.environ["MAKE_WEBHOOK_URL"], json=payload, timeout=30)
+          EOF

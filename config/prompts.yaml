@@ -1,0 +1,267 @@
+# AI Citation Tracker — prompt set v1
+# Each prompt is a question a real user might ask an AI assistant, where a
+# The Block data page holds the answer. `target` is that page.
+# intent: live = current value | trend = change over time | compare = ranking / comparison | explain = definition/method
+version: 1
+
+prompts:
+  # --- ETFs ---
+  - id: etf-01
+    text: "How much money flowed into spot Bitcoin ETFs this week?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/bitcoin-etf
+  - id: etf-02
+    text: "Which spot Bitcoin ETF has the most assets under management?"
+    topic: etfs
+    intent: compare
+    target: https://www.theblock.co/data/etfs/bitcoin-etf
+  - id: etf-03
+    text: "What are the latest net flows for spot Ethereum ETFs?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/ethereum-etfs
+  - id: etf-04
+    text: "How have Solana ETFs performed since launch in terms of inflows?"
+    topic: etfs
+    intent: trend
+    target: https://www.theblock.co/data/etfs/solana-etfs
+  - id: etf-05
+    text: "How much have XRP ETFs taken in since they launched?"
+    topic: etfs
+    intent: trend
+    target: https://www.theblock.co/data/etfs/xrp-etfs
+  - id: etf-06
+    text: "Compare BlackRock IBIT and Fidelity FBTC by assets and flows"
+    topic: etfs
+    intent: compare
+    target: https://www.theblock.co/data/etfs/etf-comparison
+  - id: etf-07
+    text: "What is the total trading volume of US spot crypto ETFs?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/crypto-etfs
+
+  # --- Treasuries ---
+  - id: tre-01
+    text: "Which public companies hold the most Bitcoin?"
+    topic: treasuries
+    intent: compare
+    target: https://www.theblock.co/data/treasuries/bitcoin-treasuries
+  - id: tre-02
+    text: "How much Bitcoin do corporate treasuries hold in total?"
+    topic: treasuries
+    intent: live
+    target: https://www.theblock.co/data/treasuries/bitcoin-treasuries
+  - id: tre-03
+    text: "Which companies have the largest Ethereum treasuries?"
+    topic: treasuries
+    intent: compare
+    target: https://www.theblock.co/data/treasuries/ethereum-treasuries
+  - id: tre-04
+    text: "Which public companies hold Solana on their balance sheet?"
+    topic: treasuries
+    intent: compare
+    target: https://www.theblock.co/data/treasuries/solana-treasuries
+  - id: tre-05
+    text: "How has the number of crypto treasury companies changed in 2026?"
+    topic: treasuries
+    intent: trend
+    target: https://www.theblock.co/data/treasuries/crypto-treasuries
+
+  # --- Stablecoins ---
+  - id: stb-01
+    text: "What is the total stablecoin market cap right now?"
+    topic: stablecoins
+    intent: live
+    target: https://www.theblock.co/data/stablecoins/usd-pegged
+  - id: stb-02
+    text: "What is USDT's market share among stablecoins?"
+    topic: stablecoins
+    intent: compare
+    target: https://www.theblock.co/data/stablecoins/usd-pegged
+  - id: stb-03
+    text: "How has USDC supply changed over the past year?"
+    topic: stablecoins
+    intent: trend
+    target: https://www.theblock.co/data/stablecoins/usd-pegged
+  - id: stb-04
+    text: "What are the largest euro-pegged stablecoins by supply?"
+    topic: stablecoins
+    intent: compare
+    target: https://www.theblock.co/data/stablecoins/non-usd-pegged
+  - id: stb-05
+    text: "How big is the gold-backed stablecoin market?"
+    topic: stablecoins
+    intent: live
+    target: https://www.theblock.co/data/stablecoins/non-fiat-pegged
+
+  # --- Markets (spot / futures / options / CME) ---
+  - id: mkt-01
+    text: "Which crypto exchanges have the highest spot trading volume?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/spot
+  - id: mkt-02
+    text: "What is Binance's market share of crypto spot volume?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/spot
+  - id: mkt-03
+    text: "What is Bitcoin futures open interest right now?"
+    topic: markets
+    intent: live
+    target: https://www.theblock.co/data/crypto-markets/futures
+  - id: mkt-04
+    text: "What are current Bitcoin perpetual funding rates?"
+    topic: markets
+    intent: live
+    target: https://www.theblock.co/data/crypto-markets/futures
+  - id: mkt-05
+    text: "How large is Bitcoin options open interest on Deribit and CME?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/options
+  - id: mkt-06
+    text: "What do CME Commitments of Traders reports show for Bitcoin futures positioning?"
+    topic: markets
+    intent: trend
+    target: https://www.theblock.co/data/crypto-markets/cme-cots
+  - id: mkt-07
+    text: "How has the stock performance of crypto public companies like Coinbase and MicroStrategy compared this year?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/public-companies
+
+  # --- On-chain ---
+  - id: onc-01
+    text: "How many daily active addresses does Bitcoin have?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/bitcoin
+  - id: onc-02
+    text: "What is Bitcoin miner revenue per day?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/bitcoin
+  - id: onc-03
+    text: "How much ETH is burned per day and is Ethereum inflationary now?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/ethereum
+  - id: onc-04
+    text: "How much ETH is staked in total?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/ethereum
+  - id: onc-05
+    text: "How many transactions does Solana process per day?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/solana
+  - id: onc-06
+    text: "Compare Bitcoin, Ethereum and Solana transaction fees and activity"
+    topic: onchain
+    intent: compare
+    target: https://www.theblock.co/data/on-chain-metrics/comparison-bitcoin-ethereum-solana
+  - id: onc-07
+    text: "What is Hyperliquid's daily trading volume and open interest?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/hyperliquid
+  - id: onc-08
+    text: "How many daily active users does Base have?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/base
+  - id: onc-09
+    text: "What are the key on-chain metrics for Avalanche?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/avalanche
+  - id: onc-10
+    text: "How is Robinhood Chain adoption growing?"
+    topic: onchain
+    intent: trend
+    target: https://www.theblock.co/data/on-chain-metrics/robinhood-chain
+
+  # --- DeFi ---
+  - id: dfi-01
+    text: "What is the monthly DEX trading volume?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/dex-non-custodial
+  - id: dfi-02
+    text: "What is the DEX to CEX spot volume ratio?"
+    topic: defi
+    intent: trend
+    target: https://www.theblock.co/data/decentralized-finance/dex-non-custodial
+  - id: dfi-03
+    text: "How much is borrowed on DeFi lending protocols like Aave?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/cryptocurrency-lending
+  - id: dfi-04
+    text: "What is Polymarket's monthly trading volume compared to Kalshi?"
+    topic: defi
+    intent: compare
+    target: https://www.theblock.co/data/decentralized-finance/prediction-markets
+  - id: dfi-05
+    text: "How big is the tokenized real-world assets market?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/real-world-assets
+  - id: dfi-06
+    text: "What is total value locked in DeFi today?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/total-value-locked-tvl
+  - id: dfi-07
+    text: "What is on-chain perpetual DEX volume this month?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/derivatives
+
+  # --- NFTs ---
+  - id: nft-01
+    text: "What is monthly NFT trading volume in 2026?"
+    topic: nfts
+    intent: trend
+    target: https://www.theblock.co/data/nft-non-fungible-tokens/nft-overview
+  - id: nft-02
+    text: "Which NFT marketplace has the most volume, OpenSea or Blur?"
+    topic: nfts
+    intent: compare
+    target: https://www.theblock.co/data/nft-non-fungible-tokens/marketplaces
+
+  # --- Alternative metrics ---
+  - id: alt-01
+    text: "How much venture capital funding did crypto startups raise this quarter?"
+    topic: alternative
+    intent: live
+    target: https://www.theblock.co/data/alternative-crypto-metrics/crypto-funding
+  - id: alt-02
+    text: "How has crypto VC funding trended over the last few years?"
+    topic: alternative
+    intent: trend
+    target: https://www.theblock.co/data/alternative-crypto-metrics/crypto-funding
+  - id: alt-03
+    text: "How has Google search interest in Bitcoin changed recently?"
+    topic: alternative
+    intent: trend
+    target: https://www.theblock.co/data/alternative-crypto-metrics/web-traffic
+  - id: alt-04
+    text: "How many SEC filings mention blockchain or crypto?"
+    topic: alternative
+    intent: trend
+    target: https://www.theblock.co/data/alternative-crypto-metrics/web-traffic
+  - id: alt-05
+    text: "Where does the Coinbase app rank in the App Store?"
+    topic: alternative
+    intent: live
+    target: https://www.theblock.co/data/alternative-crypto-metrics/app-usage
+  - id: alt-06
+    text: "How much has the crypto industry spent on US political donations?"
+    topic: alternative
+    intent: live
+    target: https://www.theblock.co/data/alternative-crypto-metrics/politics

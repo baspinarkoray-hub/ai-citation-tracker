@@ -1,0 +1,87 @@
+# Brands tracked. `domains` match citation URLs; `mentions` are
+# case-insensitive regexes matched against the answer text.
+own: theblock
+
+brands:
+  theblock:
+    label: The Block
+    group: own
+    domains: [theblock.co, theblock.pro]
+    mentions: ['\bThe Block\b', 'theblock\.co']
+  # --- media competitors ---
+  coindesk:
+    label: CoinDesk
+    group: media
+    domains: [coindesk.com]
+    mentions: ['\bCoinDesk\b']
+  decrypt:
+    label: Decrypt
+    group: media
+    domains: [decrypt.co]
+    mentions: ['\bDecrypt\b']
+  beincrypto:
+    label: BeInCrypto
+    group: media
+    domains: [beincrypto.com]
+    mentions: ['\bBeInCrypto\b']
+  cointelegraph:
+    label: Cointelegraph
+    group: media
+    domains: [cointelegraph.com]
+    mentions: ['\bCointelegraph\b']
+  # --- data competitors ---
+  coinmarketcap:
+    label: CoinMarketCap
+    group: data
+    domains: [coinmarketcap.com]
+    mentions: ['\bCoinMarketCap\b']
+  coingecko:
+    label: CoinGecko
+    group: data
+    domains: [coingecko.com]
+    mentions: ['\bCoinGecko\b']
+  defillama:
+    label: DefiLlama
+    group: data
+    domains: [defillama.com, llama.fi]
+    mentions: ['\bDefi ?Llama\b']
+  dune:
+    label: Dune
+    group: data
+    domains: [dune.com]
+    mentions: ['\bDune( Analytics)?\b']
+  glassnode:
+    label: Glassnode
+    group: data
+    domains: [glassnode.com]
+    mentions: ['\bGlassnode\b']
+  kaiko:
+    label: Kaiko
+    group: data
+    domains: [kaiko.com]
+    mentions: ['\bKaiko\b']
+  artemis:
+    label: Artemis
+    group: data
+    domains: [artemis.xyz, artemisanalytics.com]
+    mentions: ['\bArtemis\b']
+  farside:
+    label: Farside
+    group: data
+    domains: [farside.co.uk]
+    mentions: ['\bFarside\b']
+  coinglass:
+    label: CoinGlass
+    group: data
+    domains: [coinglass.com]
+    mentions: ['\bCoinGlass\b']
+  bitcointreasuries:
+    label: BitcoinTreasuries
+    group: data
+    domains: [bitcointreasuries.net]
+    mentions: ['\bBitcoin ?Treasuries(\.net)?\b']
+  sosovalue:
+    label: SoSoValue
+    group: data
+    domains: [sosovalue.com, sosovalue.xyz]
+    mentions: ['\bSoSoValue\b']
