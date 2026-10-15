@@ -48,7 +48,7 @@ python -m pytest
 
 ## Ayarlar
 
-- Model: `OPENAI_MODEL` (varsayılan `gpt-5-mini`), `PERPLEXITY_MODEL` (varsayılan `sonar`)
+- Model: `OPENAI_MODEL` (varsayılan `gpt-5-mini`), `PERPLEXITY_PRESET` (varsayılan `fast`; Perplexity Agent API)
 - Rakip ekle/çıkar: `config/brands.yaml`
 - Soru ekle: `config/prompts.yaml` — `id` değerlerini asla değiştirme, yoksa geçmişle karşılaştırma bozulur
 

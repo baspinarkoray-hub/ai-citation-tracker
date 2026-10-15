@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import os
+import re
 import time
 
 import requests
@@ -15,16 +16,19 @@ class EngineError(RuntimeError):
     pass
 
 
-def _post(url: str, headers: dict, payload: dict, retries: int = 3) -> dict:
+def _post(url: str, headers: dict, payload: dict, retries: int = 4) -> dict:
     for attempt in range(retries):
         r = requests.post(url, headers=headers, json=payload, timeout=TIMEOUT)
+        # out of credits is a 429 too, but retrying won't help
+        if r.status_code == 429 and "insufficient_quota" in r.text:
+            raise EngineError(f"429 insufficient_quota (no API credits): {r.text[:300]}")
         if r.status_code == 429 or r.status_code >= 500:
-            time.sleep(5 * (attempt + 1))
+            time.sleep(10 * (attempt + 1))
             continue
         if not r.ok:
             raise EngineError(f"{r.status_code}: {r.text[:300]}")
         return r.json()
-    raise EngineError(f"gave up after {retries} retries ({r.status_code})")
+    raise EngineError(f"gave up after {retries} retries ({r.status_code}): {r.text[:300]}")
 
 
 def _get(url: str, params: dict, retries: int = 3) -> dict:
@@ -82,13 +86,24 @@ def run_openai(prompt: str) -> dict:
 
 # ------------------------------------------------------------ Perplexity ---
 def parse_perplexity(data: dict) -> dict:
-    answer = ""
-    choices = data.get("choices") or []
-    if choices:
-        answer = choices[0].get("message", {}).get("content", "")
-    cites = list(data.get("citations") or [])
+    """Perplexity Agent API (/v1/agent). Sources live in a `search_results`
+    output item; the answer cites them inline as [1][3]. Citations = sources
+    referenced inline, in order of first reference; if none are referenced,
+    all retrieved sources."""
+    answer_parts, results = [], {}
+    for item in data.get("output", []):
+        if item.get("type") == "search_results":
+            for res in item.get("results", []):
+                results[res.get("id")] = res.get("url")
+        elif item.get("type") == "message":
+            for c in item.get("content", []):
+                if c.get("type") == "output_text":
+                    answer_parts.append(c.get("text", ""))
+    answer = "\n".join(answer_parts)
+    refs = [int(n) for n in re.findall(r"\[(\d+)\]", answer)]
+    cites = [results[n] for n in refs if n in results]
     if not cites:
-        cites = [s.get("url") for s in data.get("search_results") or []]
+        cites = list(results.values())
     return {"answer": answer, "citations": _dedupe(cites)}
 
 
@@ -97,11 +112,11 @@ def run_perplexity(prompt: str) -> dict:
     if not key:
         raise EngineError("PERPLEXITY_API_KEY missing")
     payload = {
-        "model": os.environ.get("PERPLEXITY_MODEL", "sonar"),
-        "messages": [{"role": "user", "content": prompt}],
+        "preset": os.environ.get("PERPLEXITY_PRESET", "fast"),
+        "input": prompt,
     }
     data = _post(
-        "https://api.perplexity.ai/chat/completions",
+        "https://api.perplexity.ai/v1/agent",
         {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
         payload,
     )

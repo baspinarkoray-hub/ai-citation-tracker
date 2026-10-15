@@ -30,7 +30,7 @@ def main(argv=None) -> int:
     ap.add_argument("--engines", default=",".join(ENGINES), help="comma list")
     ap.add_argument("--repeats", type=int, default=3)
     ap.add_argument("--limit", type=int, default=0, help="only first N prompts")
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--workers", type=int, default=2)
     args = ap.parse_args(argv)
 
     prompts = load("config/prompts.yaml")["prompts"]

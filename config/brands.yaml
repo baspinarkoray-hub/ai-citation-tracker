@@ -85,3 +85,14 @@ brands:
     group: data
     domains: [sosovalue.com, sosovalue.xyz]
     mentions: ['\bSoSoValue\b']
+  # --- aggregators (surfaced in first test run) ---
+  yahoofinance:
+    label: Yahoo Finance
+    group: aggregator
+    domains: [finance.yahoo.com]
+    mentions: ['\bYahoo Finance\b']
+  kucoin:
+    label: KuCoin News
+    group: aggregator
+    domains: [kucoin.com]
+    mentions: ['\bKuCoin\b']

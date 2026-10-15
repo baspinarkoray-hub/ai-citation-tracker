@@ -19,8 +19,13 @@ OPENAI_SAMPLE = {"output": [
             {"type": "url_citation", "url": "https://www.theblock.co/data/etfs/bitcoin-etf?utm=x"},
             {"type": "url_citation", "url": "https://farside.co.uk/btc/"}]}]}]}
 
-PPLX_SAMPLE = {"choices": [{"message": {"content": "Stablecoin cap is ~$300B per DefiLlama."}}],
-               "citations": ["https://defillama.com/stablecoins", "https://www.coindesk.com/x"]}
+PPLX_SAMPLE = {"output": [
+    {"type": "search_results", "results": [
+        {"id": 1, "url": "https://www.coindesk.com/x"},
+        {"id": 2, "url": "https://defillama.com/stablecoins"},
+        {"id": 3, "url": "https://example.com/unused"}]},
+    {"type": "message", "content": [{"type": "output_text",
+        "text": "Stablecoin cap is ~$300B per DefiLlama[2][1]. Growth continues[2].", "annotations": []}]}]}
 
 AIO_SAMPLE = {"ai_overview": {"text_blocks": [{"type": "paragraph", "snippet": "Strategy holds the most BTC."}],
               "references": [{"index": 1, "link": "https://bitcointreasuries.net/"},
@@ -38,6 +43,7 @@ def test_openai():
 
 def test_perplexity():
     r = parse_perplexity(PPLX_SAMPLE)
+    assert r["citations"] == ["https://defillama.com/stablecoins", "https://www.coindesk.com/x"]
     s = score(r, BRANDS, "https://www.theblock.co/data/stablecoins/usd-pegged")
     assert not s["own_cited"] and s["cited_brands"] == ["coindesk", "defillama"]
 
