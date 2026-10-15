@@ -17,6 +17,14 @@ import yaml
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
+DATA_PREFIXES = ("/data", "/treasuries", "/etfs", "/price", "/indices")
+
+
+def _is_data_url(url: str) -> bool:
+    path = "/" + url.split("theblock.co", 1)[-1].lstrip("/")
+    return path.startswith(DATA_PREFIXES)
+
+
 def pct(n, d):
     return round(100 * n / d, 1) if d else 0.0
 
@@ -64,6 +72,8 @@ def aggregate(runs: list[dict], brands_cfg: dict) -> dict:
             "aio_present_rate": aio_rate,
             "own_citation_rate": pct(sum(r["own_cited"] for r in er), len(er)),
             "own_target_hit_rate": pct(sum(r["own_target_hit"] for r in er), len(er)),
+            # any The Block data product cited (/data, /treasuries, /etfs, /price), not just the exact target
+            "own_data_page_rate": pct(sum(any(_is_data_url(u) for u in r.get("own_urls", [])) for r in er), len(er)),
             "own_citation_share": pct(brand_cites[own], total_cites),
             "own_mention_rate": pct(brand_mentions[own], len(er)),
             "own_avg_position": round(statistics.mean(positions), 1) if positions else None,
@@ -99,11 +109,11 @@ def to_markdown(s: dict, prompts: dict) -> str:
     L = [f"# AI Citation Report — {s['date']}", "",
          f"{s['n_calls']} calls, {s['n_errors']} errors.", "",
          "## The Block by engine", "",
-         "| Engine | Cited in % of answers | Target page hit % | Citation share % | Mentioned % | Avg position |",
-         "|---|---|---|---|---|---|"]
+         "| Engine | Cited in % of answers | Data page cited % | Exact target hit % | Citation share % | Mentioned % | Avg position |",
+         "|---|---|---|---|---|---|---|"]
     for eng, e in s["engines"].items():
         name = eng + (f" (AIO shown {e['aio_present_rate']}%)" if e["aio_present_rate"] is not None else "")
-        L.append(f"| {name} | {e['own_citation_rate']} | {e['own_target_hit_rate']} | "
+        L.append(f"| {name} | {e['own_citation_rate']} | {e.get('own_data_page_rate', '–')} | {e['own_target_hit_rate']} | "
                  f"{e['own_citation_share']} | {e['own_mention_rate']} | {e['own_avg_position'] or '–'} |")
 
     for eng, e in s["engines"].items():
