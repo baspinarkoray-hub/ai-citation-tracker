@@ -57,3 +57,10 @@ python -m pytest
 - API cevapları, tüketici uygulamalarında (chatgpt.com, Perplexity app) görülen cevaplarla birebir aynı değildir; bu bir **proxy ölçümdür**.
 - Cevaplar deterministik değildir; bu yüzden her soru 3 kez sorulur ve oranlar raporlanır.
 - AI Overviews resmi API'si olmadığı için SerpApi üzerinden ölçülür (ABD, İngilizce).
+
+## Dashboard (Vercel)
+
+`site/` klasörü statik bir dashboard'dur. `tracker/site.py`, `data/raw` içindeki tüm tam ölçümlerden `site/data.json`'ı üretir
+(haftalık trend + son ölçümün detayı). GitHub Actions her haftalık ölçümden sonra bunu yeniler ve repoya yazar;
+Vercel'e bağlı repo her push'ta otomatik yeniden yayınlanır. Vercel ayarı `vercel.json`'da: build yok, `site/` yayınlanır.
+Site arama motorlarına kapalıdır (noindex + robots.txt).

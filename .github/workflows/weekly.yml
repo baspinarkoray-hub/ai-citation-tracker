@@ -61,7 +61,9 @@ jobs:
             BASE=$(git rev-parse HEAD)
             # 2) rebuild the report on top of the latest repo state
             python -m tracker.report $TEST_FLAG | tee -a "$GITHUB_STEP_SUMMARY"
-            git add data reports
+            # 3) refresh the Vercel dashboard data (full runs only); Vercel redeploys on push
+            [ -z "$TEST_FLAG" ] && python -m tracker.site
+            git add data reports site
             git commit -q -m "AI citation report $(date -u +%F)" || true
             git push -q origin HEAD:main && exit 0
             echo "push rejected, retrying ($i)"; sleep 10

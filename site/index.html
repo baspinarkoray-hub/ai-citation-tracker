@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI Search Visibility · The Block</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f3; --panel: #ffffff; --fg: #1b1b1a; --muted: #6b6a66; --line: #e4e2dc;
+    --accent: #2f5bea; --bar: #c9c6be; --bad: #c2410c; --good: #15803d; --soft: #eef2fe;
+    --radius: 10px; --serif: "Source Serif 4", Georgia, serif; --sans: Inter, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141413; --panel: #1d1d1b; --fg: #eceae4; --muted: #9a978f; --line: #2e2d2a;
+            --accent: #7b9bff; --bar: #4a4844; --bad: #fb923c; --good: #4ade80; --soft: #22263a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 var(--sans); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font: 400 clamp(26px, 4vw, 36px)/1.15 var(--serif); margin: 0 0 8px; }
+  h2 { font-size: 17px; font-weight: 600; margin: 40px 0 12px; }
+  h3 { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+  .lede { max-width: 62rem; font-size: 16px; margin: 0 0 6px; }
+  .meta, .note { color: var(--muted); font-size: 13px; }
+  .note { margin: 0 0 14px; }
+  .bad { color: var(--bad); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 14px; margin-top: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; min-width: 0; }
+  .tile .label { color: var(--muted); font-size: 13px; }
+  .tile .big { font: 400 40px/1.1 var(--serif); margin: 6px 0; font-variant-numeric: tabular-nums; }
+  .tile .sub { color: var(--muted); font-size: 12.5px; }
+  .delta { font: 500 13px var(--sans); margin-left: 6px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .seg button { font: inherit; font-size: 13px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .bars { display: grid; grid-template-columns: minmax(90px, max-content) 1fr; gap: 7px 12px; align-items: center; font-size: 13px; }
+  .bars .lab { text-align: right; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bars .lab.own { color: var(--fg); font-weight: 600; }
+  .bars .track { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .bars .bar { height: 14px; border-radius: 4px; background: var(--bar); min-width: 2px; }
+  .bars .bar.own { background: var(--accent); }
+  .bars .bar.warn { background: var(--bad); }
+  .bars .val { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 500; position: sticky; top: 0; background: var(--panel); }
+  th.n, td.n { text-align: right; white-space: nowrap; }
+  tr.total td { font-weight: 600; }
+  td.zero { color: var(--bad); }
+  #questions td:first-child { white-space: nowrap; }
+  .wide { overflow-x: auto; }
+  .scroll { max-height: 560px; overflow: auto; }
+  input[type=search] { font: inherit; font-size: 13px; width: 100%; max-width: 340px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); margin-bottom: 10px; }
+  .chip { display: inline-block; height: 8px; border-radius: 4px; background: var(--accent); vertical-align: middle; margin-right: 6px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .compare div { border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 13px; }
+  .compare strong { display: block; margin-bottom: 4px; }
+  svg text { fill: var(--muted); font-size: 12px; font-family: var(--sans); }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 12px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  ul { margin: 0; padding-left: 1.1em; } li { margin-bottom: 6px; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
+  @media (max-width: 560px) { .compare { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AI search visibility: The Block vs. competitors</h1>
+    <p class="lede" id="lede">Loading…</p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <h2>Trend</h2>
+  <div class="card">
+    <h3>Share of AI answers citing The Block, by measurement week</h3>
+    <p class="note" id="trendNote">Solid: any theblock.co link. Dashed: a The Block data page.</p>
+    <div id="trend"></div>
+    <div class="legend" id="trendLegend"></div>
+  </div>
+
+  <h2>Who AI engines cite for crypto data</h2>
+  <div class="card">
+    <h3>Share of answers citing each source</h3>
+    <p class="note">At least one link to the source in the answer. The Block highlighted.</p>
+    <div class="seg" id="seg"></div>
+    <div class="bars" id="leader"></div>
+  </div>
+
+  <h2>By engine</h2>
+  <div class="card wide">
+    <p class="note">Cited: answer links to theblock.co. Data page: links to /data, /treasuries, /etfs or /price. Share: The Block links as a share of all source links. Mentioned: "The Block" named in the text. Position: rank of the first The Block link (1 = first).</p>
+    <table id="engines"><thead><tr><th>Engine</th><th class="n">Answers</th><th class="n">Cited</th><th class="n">Data page</th><th class="n">Share</th><th class="n">Mentioned</th><th class="n">Position</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <h2>Why: AI engines cite our articles, not our data</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Where The Block's citations land</h3>
+      <p class="note">All theblock.co links cited in the latest run, by page type.</p>
+      <div class="bars" id="types"></div>
+    </div>
+    <div class="card">
+      <h3>What an AI crawler sees</h3>
+      <p class="note">AI engines read page text, not charts. robots.txt allows every AI bot, so access is not the issue.</p>
+      <div class="compare">
+        <div><strong>/data dashboards</strong>Charts only: no figures, dates or summary in the HTML. To an AI engine the page is empty.</div>
+        <div><strong>/treasuries trackers</strong>Heading, intro, headline totals and an HTML table. Cited even though no question targeted them.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>By topic</h2>
+  <div class="card wide">
+    <table id="topics"><thead><tr><th>Topic</th><th class="n">Questions</th><th class="n">ChatGPT</th><th class="n">Perplexity</th><th class="n">Google AIO</th><th class="n">All</th><th>Top competitor</th><th class="n">Its share</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <h2>Most-cited domains</h2>
+  <div class="card"><p class="note">Source links by domain, all engines, latest run.</p><div class="bars" id="domains"></div></div>
+
+  <h2>Question-level detail</h2>
+  <div class="card">
+    <p class="note">Biggest gaps first. "Cited in" = answers linking to The Block out of all answers for that question. Winners = most-cited other sources (answer counts).</p>
+    <input type="search" id="q" placeholder="Search questions, topics, competitors…">
+    <div class="scroll wide">
+      <table id="questions"><thead><tr><th>ID</th><th>Question</th><th>Topic</th><th class="n">Cited in</th><th>Winners</th><th>Target page</th></tr></thead><tbody></tbody></table>
+    </div>
+  </div>
+
+  <footer id="foot">Method: each question sent via API to ChatGPT (OpenAI Responses + web search), Perplexity (Agent API) and Google AI Overviews (SerpApi, US/English). API answers approximate, but are not identical to, what users see in the apps. Updated automatically after every weekly run.</footer>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const f1 = (v) => v == null ? '—' : v.toFixed(1) + '%';
+const fmt = (v) => v.toLocaleString('en-US');
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function bars(target, rows, { value, label, own = () => false, warn = () => false, fmtv = f1 }) {
+  const box = $(target); box.replaceChildren();
+  const max = Math.max(...rows.map(value), 1);
+  rows.forEach(r => {
+    box.appendChild(el('div', 'lab' + (own(r) ? ' own' : ''), label(r)));
+    const t = el('div', 'track');
+    const b = el('div', 'bar' + (own(r) ? ' own' : warn(r) ? ' warn' : ''));
+    b.style.width = `calc(${(value(r) / max) * 100}% - 60px)`;
+    t.append(b, el('span', 'val', fmtv(value(r))));
+    box.appendChild(t);
+  });
+}
+
+function trendChart(trend) {
+  const box = $('#trend'); box.replaceChildren();
+  const series = [
+    { key: 'all', name: 'All engines', color: 'var(--accent)' },
+    { key: 'chatgpt', name: 'ChatGPT', color: '#10a37f' },
+    { key: 'perplexity', name: 'Perplexity', color: '#a855f7' },
+    { key: 'google_aio', name: 'Google AIO', color: '#e8710a' },
+  ];
+  const W = box.clientWidth || 700, H = 240, m = { t: 12, r: 16, b: 26, l: 40 };
+  const max = Math.max(5, ...trend.flatMap(p => series.map(s => p[s.key]?.cited ?? 0))) * 1.15;
+  const x = (i) => trend.length === 1 ? (W - m.l - m.r) / 2 + m.l : m.l + i * (W - m.l - m.r) / (trend.length - 1);
+  const y = (v) => H - m.b - (v / max) * (H - m.t - m.b);
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', '100%');
+  const add = (tag, attrs, text) => { const n = document.createElementNS(ns, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (text) n.textContent = text; svg.appendChild(n); return n; };
+  const step = max > 40 ? 10 : 5;
+  for (let v = 0; v <= max; v += step) {
+    add('line', { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: 'var(--line)' });
+    add('text', { x: m.l - 6, y: y(v) + 4, 'text-anchor': 'end' }, v + '%');
+  }
+  trend.forEach((p, i) => add('text', { x: x(i), y: H - 6, 'text-anchor': 'middle' }, new Date(p.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })));
+  series.forEach(s => {
+    ['cited', 'data_page'].forEach(metric => {
+      const pts = trend.map((p, i) => p[s.key] ? [x(i), y(p[s.key][metric])] : null).filter(Boolean);
+      if (pts.length > 1) add('path', { d: 'M' + pts.map(p => p.join(',')).join('L'), fill: 'none', stroke: s.color, 'stroke-width': s.key === 'all' ? 2.5 : 1.5, 'stroke-dasharray': metric === 'data_page' ? '5 4' : '', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
+      pts.forEach(([cx, cy]) => add('circle', { cx, cy, r: s.key === 'all' ? 4 : 3, fill: metric === 'data_page' ? 'var(--panel)' : s.color, stroke: s.color, 'stroke-width': 1.5 }));
+    });
+  });
+  box.appendChild(svg);
+  const lg = $('#trendLegend'); lg.replaceChildren();
+  series.forEach(s => { const sp = el('span'); const i = el('i'); i.style.background = s.color; sp.append(i, s.name); lg.appendChild(sp); });
+}
+
+fetch('data.json', { cache: 'no-store' }).then(r => r.json()).then(d => {
+  const all = d.engines.find(e => e.engine === 'All engines');
+  const lb = d.leaderboard['All engines'];
+  const rank = lb.findIndex(r => r.brand === 'The Block') + 1;
+  const never = d.questions.filter(q => q.cited === 0).length;
+  const prev = d.trend.length > 1 ? d.trend[d.trend.length - 2].all : null;
+  const dateStr = new Date(d.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+  $('#lede').textContent = `Across ChatGPT, Perplexity and Google AI Overviews, The Block is cited in ${f1(all.cited)} of answers to crypto data questions, ranking #${rank} of ${lb.length} sources cited. Its data pages, the pages built to answer these questions, are cited in only ${f1(all.data_page)}.`;
+  $('#meta').textContent = `Latest run ${dateStr} · ${d.prompts} questions · ${fmt(all.answers)} AI answers · ${fmt(all.citations)} source links`;
+
+  const delta = (cur, key) => {
+    if (!prev) return null;
+    const v = +(cur - prev[key]).toFixed(1);
+    const s = el('span', 'delta', (v > 0 ? '+' : '') + v + ' pts');
+    s.style.color = v > 0 ? 'var(--good)' : v < 0 ? 'var(--bad)' : 'var(--muted)';
+    return s;
+  };
+  const tile = (label, big, sub, cls, dl) => {
+    const c = el('div', 'card tile'); c.appendChild(el('div', 'label', label));
+    const b = el('div', 'big' + (cls ? ' ' + cls : ''), big); if (dl) b.appendChild(dl); c.appendChild(b);
+    c.appendChild(el('div', 'sub', sub)); $('#tiles').appendChild(c);
+  };
+  tile('Answers citing The Block', f1(all.cited), 'At least one theblock.co link, all engines', '', delta(all.cited, 'cited'));
+  tile('Rank among sources', '#' + rank, rank > 1 ? `Behind ${lb[0].brand}` : 'Most-cited source', '');
+  tile('Answers citing a data page', f1(all.data_page), '/data, /treasuries, /etfs or /price', 'bad', delta(all.data_page, 'data_page'));
+  tile('Questions never citing us', `${never} of ${d.prompts}`, 'On any engine, in any run', 'bad');
+
+  if (d.trend.length === 1) $('#trendNote').textContent += ' One measurement so far: the line appears after the next weekly run.';
+  trendChart(d.trend);
+  window.addEventListener('resize', () => trendChart(d.trend));
+
+  const names = Object.keys(d.leaderboard).sort((a, b) => (a === 'All engines' ? -1 : b === 'All engines' ? 1 : 0));
+  let current = 'All engines';
+  const drawLeader = () => {
+    document.querySelectorAll('#seg button').forEach(b => b.setAttribute('aria-pressed', String(b.textContent === current)));
+    bars('#leader', d.leaderboard[current], { value: r => r.cited, label: r => r.brand, own: r => r.brand === 'The Block' });
+  };
+  names.forEach(n => { const b = el('button', null, n); b.type = 'button'; b.onclick = () => { current = n; drawLeader(); }; $('#seg').appendChild(b); });
+  drawLeader();
+
+  const eb = $('#engines tbody');
+  d.engines.forEach(e => {
+    const tr = el('tr', e.engine === 'All engines' ? 'total' : '');
+    [e.engine, fmt(e.answers), f1(e.cited), f1(e.data_page), f1(e.share), f1(e.mentioned), e.position ?? '—'].forEach((v, i) => {
+      const td = el('td', (i ? 'n' : '') + (i === 3 ? ' bad' : ''), String(v)); tr.appendChild(td);
+    });
+    eb.appendChild(tr);
+  });
+
+  bars('#types', d.page_types, { value: r => r.citations, label: r => r.type, own: r => r.type.startsWith('News'), warn: r => !r.type.startsWith('News'), fmtv: fmt });
+
+  const tb = $('#topics tbody');
+  d.topics.slice().sort((a, b) => a.all - b.all).forEach(t => {
+    const tr = el('tr');
+    [[t.topic], [t.questions, 'n'], [f1(t.ChatGPT), 'n', t.ChatGPT === 0], [f1(t.Perplexity), 'n', t.Perplexity === 0],
+     [f1(t['Google AI Overviews']), 'n', t['Google AI Overviews'] === 0], [f1(t.all), 'n', t.all === 0],
+     [t.top_competitor || '—'], [f1(t.top_competitor_pct), 'n']].forEach(([v, c, z]) => tr.appendChild(el('td', (c || '') + (z ? ' zero' : ''), String(v))));
+    tb.appendChild(tr);
+  });
+
+  bars('#domains', d.domains, { value: r => r.citations, label: r => r.domain, own: r => r.domain === 'theblock.co', fmtv: fmt });
+
+  const qb = $('#questions tbody');
+  const drawQ = (term = '') => {
+    qb.replaceChildren();
+    d.questions.filter(q => [q.id, q.question, q.topic, q.winners.join(' '), q.target].join(' ').toLowerCase().includes(term)).forEach(q => {
+      const tr = el('tr');
+      tr.append(el('td', null, q.id), el('td', null, q.question), el('td', null, q.topic),
+        el('td', 'n' + (q.cited === 0 ? ' zero' : ''), `${q.cited}/${q.answers}`), el('td', null, q.winners.join(', ')), el('td', null, q.target));
+      qb.appendChild(tr);
+    });
+  };
+  $('#q').addEventListener('input', e => drawQ(e.target.value.toLowerCase()));
+  drawQ();
+  $('#foot').textContent += ` Data generated ${d.generated.replace('T', ' ')} UTC.`;
+}).catch(err => { $('#lede').textContent = 'Could not load data.json: ' + err.message; });
+</script>
+</body>
+</html>
