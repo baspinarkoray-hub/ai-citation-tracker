@@ -39,10 +39,13 @@ def main(argv=None) -> int:
     brands = Brands(load("config/brands.yaml"))
     engines = [e.strip() for e in args.engines.split(",") if e.strip()]
 
-    today = dt.date.today().isoformat()
-    out_dir = ROOT / "data" / "raw"
+    now = dt.datetime.now(dt.timezone.utc)
+    today = now.date().isoformat()
+    # partial runs (--limit) are tests: kept apart so they never enter the history
+    out_dir = ROOT / "data" / ("test" if args.limit else "raw")
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{today}.jsonl"
+    # one file per run, so concurrent/consecutive runs never collide
+    out_path = out_dir / f"{today}_{now:%H%M%S}.jsonl"
 
     jobs = [(e, p, r) for e in engines for p in prompts for r in range(1, args.repeats + 1)]
     print(f"{len(jobs)} calls → {out_path.relative_to(ROOT)}")

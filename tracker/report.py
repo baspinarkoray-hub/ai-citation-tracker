@@ -21,9 +21,11 @@ def pct(n, d):
     return round(100 * n / d, 1) if d else 0.0
 
 
-def load_runs(date: str):
-    path = ROOT / "data" / "raw" / f"{date}.jsonl"
-    return [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+def load_runs(date: str, folder: str = "raw"):
+    runs = []
+    for path in sorted((ROOT / "data" / folder).glob(f"{date}*.jsonl")):
+        runs += [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    return runs
 
 
 def aggregate(runs: list[dict], brands_cfg: dict) -> dict:
@@ -128,22 +130,31 @@ def to_markdown(s: dict, prompts: dict) -> str:
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--date")
+    ap.add_argument("--test", action="store_true", help="report on data/test, don't touch history")
     a = ap.parse_args(argv)
-    raw = sorted((ROOT / "data" / "raw").glob("*.jsonl"))
-    date = a.date or raw[-1].stem
+    folder = "test" if a.test else "raw"
+    files = sorted((ROOT / "data" / folder).glob("*.jsonl"))
+    if not files:
+        print(f"no runs in data/{folder}")
+        return
+    date = a.date or files[-1].stem[:10]
     brands_cfg = yaml.safe_load((ROOT / "config/brands.yaml").read_text())
     prompts = {p["id"]: p for p in yaml.safe_load((ROOT / "config/prompts.yaml").read_text())["prompts"]}
 
-    s = aggregate(load_runs(date), brands_cfg)
-    hist_path = ROOT / "data" / "summary.json"
-    hist = json.loads(hist_path.read_text()) if hist_path.exists() else {"weeks": []}
-    hist["weeks"] = [w for w in hist["weeks"] if w["date"] != date] + [s]
-    hist["weeks"].sort(key=lambda w: w["date"])
-    hist_path.write_text(json.dumps(hist, indent=1, ensure_ascii=False))
-
-    (ROOT / "reports").mkdir(exist_ok=True)
+    # tests report only on the latest test file; full runs on everything that day
+    runs = load_runs(files[-1].stem, folder) if a.test else load_runs(date, folder)
+    s = aggregate(runs, brands_cfg)
     md = to_markdown(s, prompts)
-    (ROOT / "reports" / f"{date}.md").write_text(md)
+    (ROOT / "reports").mkdir(exist_ok=True)
+    if a.test:
+        (ROOT / "reports" / f"test-{files[-1].stem}.md").write_text("> TEST RUN — not part of the history\n\n" + md)
+    else:
+        hist_path = ROOT / "data" / "summary.json"
+        hist = json.loads(hist_path.read_text()) if hist_path.exists() else {"weeks": []}
+        hist["weeks"] = [w for w in hist["weeks"] if w["date"] != date] + [s]
+        hist["weeks"].sort(key=lambda w: w["date"])
+        hist_path.write_text(json.dumps(hist, indent=1, ensure_ascii=False))
+        (ROOT / "reports" / f"{date}.md").write_text(md)
     print(md)
 
 
