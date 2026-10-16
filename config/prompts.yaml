@@ -265,3 +265,175 @@ prompts:
     topic: alternative
     intent: live
     target: https://www.theblock.co/data/alternative-crypto-metrics/politics
+
+  # ===== v2 (2026-10-16): experiment coverage — every experiment page has ≥3 prompts =====
+  # --- stablecoins ---
+  - id: stb-06
+    text: "How big is the euro stablecoin market compared to USD stablecoins?"
+    topic: stablecoins
+    intent: compare
+    target: https://www.theblock.co/data/stablecoins/non-usd-pegged
+  - id: stb-07
+    text: "How has EURC supply grown this year?"
+    topic: stablecoins
+    intent: trend
+    target: https://www.theblock.co/data/stablecoins/non-usd-pegged
+  # --- ETFs ---
+  - id: etf-08
+    text: "What are total assets under management in US spot Bitcoin ETFs?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/bitcoin-etf
+  - id: etf-09
+    text: "Which spot Ethereum ETF has the largest assets under management?"
+    topic: etfs
+    intent: compare
+    target: https://www.theblock.co/data/etfs/ethereum-etfs
+  - id: etf-10
+    text: "How much ETH do US spot Ethereum ETFs hold?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/ethereum-etfs
+  - id: etf-11
+    text: "What is the daily trading volume of spot Solana ETFs?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/solana-etfs
+  - id: etf-12
+    text: "Which Solana ETF has the most assets?"
+    topic: etfs
+    intent: compare
+    target: https://www.theblock.co/data/etfs/solana-etfs
+  - id: etf-13
+    text: "What are the latest daily net flows for XRP ETFs?"
+    topic: etfs
+    intent: live
+    target: https://www.theblock.co/data/etfs/xrp-etfs
+  - id: etf-14
+    text: "Which XRP ETF issuer has the largest market share?"
+    topic: etfs
+    intent: compare
+    target: https://www.theblock.co/data/etfs/xrp-etfs
+  # --- markets ---
+  - id: mkt-08
+    text: "What was total crypto spot exchange volume last month?"
+    topic: markets
+    intent: live
+    target: https://www.theblock.co/data/crypto-markets/spot
+  - id: mkt-09
+    text: "Which exchanges have the highest Bitcoin futures open interest?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/futures
+  - id: mkt-10
+    text: "What was monthly Bitcoin options trading volume?"
+    topic: markets
+    intent: trend
+    target: https://www.theblock.co/data/crypto-markets/options
+  - id: mkt-11
+    text: "How large is Ethereum options open interest?"
+    topic: markets
+    intent: live
+    target: https://www.theblock.co/data/crypto-markets/options
+  - id: mkt-12
+    text: "What is the combined market cap of publicly traded crypto companies?"
+    topic: markets
+    intent: live
+    target: https://www.theblock.co/data/crypto-markets/public-companies
+  - id: mkt-13
+    text: "How have crypto mining stocks performed compared to Bitcoin this year?"
+    topic: markets
+    intent: compare
+    target: https://www.theblock.co/data/crypto-markets/public-companies
+  # --- on-chain ---
+  - id: onc-11
+    text: "What is Bitcoin's current network hashrate?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/bitcoin
+  - id: onc-12
+    text: "How many daily active addresses does Ethereum have?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/ethereum
+  - id: onc-13
+    text: "How many daily active addresses does Solana have?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/solana
+  - id: onc-14
+    text: "How much revenue do Solana validators earn from fees per month?"
+    topic: onchain
+    intent: trend
+    target: https://www.theblock.co/data/on-chain-metrics/solana
+  - id: onc-15
+    text: "How many transactions does Base process per day?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/base
+  - id: onc-16
+    text: "How much fee revenue does Base generate?"
+    topic: onchain
+    intent: trend
+    target: https://www.theblock.co/data/on-chain-metrics/base
+  - id: onc-17
+    text: "How many users trade on Hyperliquid each day?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/hyperliquid
+  - id: onc-18
+    text: "How much fee revenue does Hyperliquid generate per month?"
+    topic: onchain
+    intent: trend
+    target: https://www.theblock.co/data/on-chain-metrics/hyperliquid
+  - id: onc-19
+    text: "How many daily transactions does the Avalanche C-Chain process?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/avalanche
+  - id: onc-20
+    text: "How many active addresses does Avalanche have?"
+    topic: onchain
+    intent: live
+    target: https://www.theblock.co/data/on-chain-metrics/avalanche
+  # --- DeFi ---
+  - id: dfi-08
+    text: "Which blockchains have the most total value locked in DeFi?"
+    topic: defi
+    intent: compare
+    target: https://www.theblock.co/data/decentralized-finance/total-value-locked-tvl
+  - id: dfi-09
+    text: "How has DeFi total value locked changed over the past year?"
+    topic: defi
+    intent: trend
+    target: https://www.theblock.co/data/decentralized-finance/total-value-locked-tvl
+  - id: dfi-10
+    text: "What is Aave's market share of DeFi lending?"
+    topic: defi
+    intent: compare
+    target: https://www.theblock.co/data/decentralized-finance/cryptocurrency-lending
+  - id: dfi-11
+    text: "How much in total deposits do DeFi lending protocols hold?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/cryptocurrency-lending
+  - id: dfi-12
+    text: "How much tokenized US Treasury debt is on-chain?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/real-world-assets
+  - id: dfi-13
+    text: "Which issuers lead the tokenized real-world asset market?"
+    topic: defi
+    intent: compare
+    target: https://www.theblock.co/data/decentralized-finance/real-world-assets
+  - id: dfi-14
+    text: "Which perpetual DEX has the highest trading volume?"
+    topic: defi
+    intent: compare
+    target: https://www.theblock.co/data/decentralized-finance/derivatives
+  - id: dfi-15
+    text: "What is the open interest on decentralized perpetual exchanges?"
+    topic: defi
+    intent: live
+    target: https://www.theblock.co/data/decentralized-finance/derivatives

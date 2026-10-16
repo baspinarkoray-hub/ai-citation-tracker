@@ -71,3 +71,23 @@ def test_report_end_to_end():
     md = to_markdown(s, {"p1": {"text": "test"}})
     assert "Opportunities" in md and "perplexity" in md
     json.dumps(s)
+
+
+def test_experiment_grouping():
+    from tracker import experiment
+    cfg = {"name": "t", "week0": None, "pairs": [
+        {"topic": "x", "treatment": "/data/a", "control": "/data/b"}]}
+    base = {"own_cited": True, "cited_brands": ["theblock"], "mentioned_brands": []}
+    runs = [
+        {**base, "target": "https://www.theblock.co/data/a", "own_urls": ["https://www.theblock.co/data/a/chart-1?x=1"]},
+        {**base, "target": "https://www.theblock.co/data/a", "own_urls": ["https://www.theblock.co/news/foo"]},
+        {**base, "target": "https://www.theblock.co/data/b", "own_urls": [], "own_cited": False},
+        {**base, "target": "https://www.theblock.co/data/zzz", "own_urls": []},
+    ]
+    s = experiment.summarize(runs, cfg)
+    assert s["groups"]["treatment"] == {"answers": 2, "cited": 100.0, "data_page": 50.0, "target": 50.0}
+    assert s["groups"]["control"]["answers"] == 1 and s["groups"]["control"]["target"] == 0.0
+    assert s["pairs"][0]["treatment"]["page"] == "/data/a"
+    # /data/ab must not count as a hit for /data/a
+    r = {**base, "target": "https://www.theblock.co/data/a", "own_urls": ["https://www.theblock.co/data/ab"]}
+    assert experiment.summarize([r], cfg)["groups"]["treatment"]["target"] == 0.0

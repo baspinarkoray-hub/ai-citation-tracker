@@ -29,6 +29,8 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--engines", default=",".join(ENGINES), help="comma list")
     ap.add_argument("--repeats", type=int, default=3)
+    ap.add_argument("--aio-repeats", type=int, default=1,
+                    help="repeats for google_aio (paid per search; overviews vary less run to run)")
     ap.add_argument("--limit", type=int, default=0, help="only first N prompts")
     ap.add_argument("--workers", type=int, default=2)
     args = ap.parse_args(argv)
@@ -47,7 +49,8 @@ def main(argv=None) -> int:
     # one file per run, so concurrent/consecutive runs never collide
     out_path = out_dir / f"{today}_{now:%H%M%S}.jsonl"
 
-    jobs = [(e, p, r) for e in engines for p in prompts for r in range(1, args.repeats + 1)]
+    reps = lambda e: min(args.repeats, args.aio_repeats) if e == "google_aio" else args.repeats
+    jobs = [(e, p, r) for e in engines for p in prompts for r in range(1, reps(e) + 1)]
     print(f"{len(jobs)} calls → {out_path.relative_to(ROOT)}")
 
     def work(engine, p, rep):

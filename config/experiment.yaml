@@ -1,0 +1,17 @@
+# Data-page readability experiment (v1, set 2026-10-16)
+# Pages paired by topic; treatment/control assigned at random within each pair
+# (random.Random(20261016)). Treatment pages get the text layer from the spec;
+# control pages stay as they are until the experiment ends.
+name: data-page-text-layer-v1
+week0: null          # set to the date the treatment goes live
+pairs:
+  - {topic: stablecoins, treatment: /data/stablecoins/usd-pegged,                       control: /data/stablecoins/non-usd-pegged}
+  - {topic: etfs,        treatment: /data/etfs/ethereum-etfs,                           control: /data/etfs/bitcoin-etf}
+  - {topic: etfs,        treatment: /data/etfs/xrp-etfs,                                control: /data/etfs/solana-etfs}
+  - {topic: markets,     treatment: /data/crypto-markets/spot,                          control: /data/crypto-markets/futures}
+  - {topic: markets,     treatment: /data/crypto-markets/options,                       control: /data/crypto-markets/public-companies}
+  - {topic: onchain,     treatment: /data/on-chain-metrics/bitcoin,                     control: /data/on-chain-metrics/ethereum}
+  - {topic: onchain,     treatment: /data/on-chain-metrics/base,                        control: /data/on-chain-metrics/solana}
+  - {topic: onchain,     treatment: /data/on-chain-metrics/avalanche,                   control: /data/on-chain-metrics/hyperliquid}
+  - {topic: defi,        treatment: /data/decentralized-finance/cryptocurrency-lending, control: /data/decentralized-finance/total-value-locked-tvl}
+  - {topic: defi,        treatment: /data/decentralized-finance/derivatives,            control: /data/decentralized-finance/real-world-assets}

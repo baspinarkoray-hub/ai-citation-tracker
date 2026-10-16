@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T20:26+00:00",
+ "generated": "2026-10-16T11:35+00:00",
  "date": "2026-10-15",
  "prompts": 49,
  "engines": [
@@ -62,6 +62,20 @@
    "all": {
     "cited": 11.7,
     "data_page": 2.9
+   },
+   "experiment": {
+    "treatment": {
+     "answers": 98,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "answers": 91,
+     "cited": 5.5,
+     "data_page": 0.0,
+     "target": 0.0
+    }
    }
   }
  ],
@@ -1067,5 +1081,195 @@
    ],
    "target": "/data/alternative-crypto-metrics/crypto-funding"
   }
- ]
+ ],
+ "experiment": {
+  "name": "data-page-text-layer-v1",
+  "week0": null,
+  "groups": {
+   "treatment": {
+    "answers": 98,
+    "cited": 0.0,
+    "data_page": 0.0,
+    "target": 0.0
+   },
+   "control": {
+    "answers": 91,
+    "cited": 5.5,
+    "data_page": 0.0,
+    "target": 0.0
+   }
+  },
+  "pairs": [
+   {
+    "topic": "stablecoins",
+    "treatment": {
+     "page": "/data/stablecoins/usd-pegged",
+     "answers": 21,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/stablecoins/non-usd-pegged",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "etfs",
+    "treatment": {
+     "page": "/data/etfs/ethereum-etfs",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/etfs/bitcoin-etf",
+     "answers": 14,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "etfs",
+    "treatment": {
+     "page": "/data/etfs/xrp-etfs",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/etfs/solana-etfs",
+     "answers": 7,
+     "cited": 71.4,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "markets",
+    "treatment": {
+     "page": "/data/crypto-markets/spot",
+     "answers": 14,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/crypto-markets/futures",
+     "answers": 14,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "markets",
+    "treatment": {
+     "page": "/data/crypto-markets/options",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/crypto-markets/public-companies",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "onchain",
+    "treatment": {
+     "page": "/data/on-chain-metrics/bitcoin",
+     "answers": 14,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/on-chain-metrics/ethereum",
+     "answers": 14,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "onchain",
+    "treatment": {
+     "page": "/data/on-chain-metrics/base",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/on-chain-metrics/solana",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "onchain",
+    "treatment": {
+     "page": "/data/on-chain-metrics/avalanche",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/on-chain-metrics/hyperliquid",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "defi",
+    "treatment": {
+     "page": "/data/decentralized-finance/cryptocurrency-lending",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/decentralized-finance/total-value-locked-tvl",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   },
+   {
+    "topic": "defi",
+    "treatment": {
+     "page": "/data/decentralized-finance/derivatives",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    },
+    "control": {
+     "page": "/data/decentralized-finance/real-world-assets",
+     "answers": 7,
+     "cited": 0.0,
+     "data_page": 0.0,
+     "target": 0.0
+    }
+   }
+  ]
+ }
 }

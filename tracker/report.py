@@ -14,6 +14,8 @@ import statistics
 
 import yaml
 
+from tracker import experiment
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
@@ -102,6 +104,8 @@ def aggregate(runs: list[dict], brands_cfg: dict) -> dict:
             "own_cited": sum(r["own_cited"] for r in rs), "of": len(rs),
             "competitors": [labels.get(b, b) for b, _ in comp.most_common(3)],
         }
+    out["experiment"] = experiment.summarize(
+        [r for r in ok if r["engine"] != "google_aio" or r.get("aio_present")])
     return out
 
 
@@ -134,6 +138,7 @@ def to_markdown(s: dict, prompts: dict) -> str:
             txt = prompts.get(pid, {}).get("text", pid)
             who = "; ".join(f"{eng}: {', '.join(v['competitors'])}" for eng, v in lost)
             L.append(f"- **{pid}** — {txt}  \n  ↳ {who}")
+    L += experiment.markdown(s.get("experiment"))
     return "\n".join(L) + "\n"
 
 

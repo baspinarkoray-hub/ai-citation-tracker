@@ -14,6 +14,7 @@ import pathlib
 
 import yaml
 
+from tracker import experiment
 from tracker.report import _is_data_url
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -71,6 +72,9 @@ def build():
                 point[key] = {"cited": s["cited"], "data_page": s["data_page"]}
         s = engine_summary(runs, "All engines")
         point["all"] = {"cited": s["cited"], "data_page": s["data_page"]}
+        ex = experiment.summarize(runs)
+        if ex:
+            point["experiment"] = ex["groups"]
         trend.append(point)
 
     # --- latest date detail ---
@@ -139,6 +143,7 @@ def build():
         "page_types": [{"type": k, "citations": v} for k, v in page_types.most_common()],
         "domains": [{"domain": d, "citations": n} for d, n in domains.most_common(15)],
         "questions": questions,
+        "experiment": experiment.summarize(runs),
     }
     (ROOT / "site").mkdir(exist_ok=True)
     (ROOT / "site" / "data.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
