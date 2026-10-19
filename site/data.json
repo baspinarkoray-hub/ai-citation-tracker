@@ -1,47 +1,47 @@
 {
- "generated": "2026-10-16T11:35+00:00",
- "date": "2026-10-15",
- "prompts": 49,
+ "generated": "2026-10-19T07:59+00:00",
+ "date": "2026-10-19",
+ "prompts": 82,
  "engines": [
   {
    "engine": "ChatGPT",
-   "answers": 147,
-   "citations": 421,
-   "cited": 12.9,
-   "data_page": 1.4,
-   "share": 5.5,
-   "mentioned": 16.3,
-   "position": 2.0
+   "answers": 246,
+   "citations": 644,
+   "cited": 8.5,
+   "data_page": 1.6,
+   "share": 3.9,
+   "mentioned": 12.6,
+   "position": 2.3
   },
   {
    "engine": "Perplexity",
-   "answers": 147,
-   "citations": 360,
-   "cited": 10.9,
-   "data_page": 4.8,
-   "share": 4.4,
-   "mentioned": 0.7,
-   "position": 2.6
+   "answers": 245,
+   "citations": 556,
+   "cited": 3.7,
+   "data_page": 1.6,
+   "share": 1.6,
+   "mentioned": 0.4,
+   "position": 1.7
   },
   {
    "engine": "Google AI Overviews",
-   "answers": 49,
-   "citations": 286,
-   "cited": 10.2,
-   "data_page": 2.0,
-   "share": 3.1,
-   "mentioned": 0.0,
-   "position": 1.6
+   "answers": 62,
+   "citations": 359,
+   "cited": 11.3,
+   "data_page": 8.1,
+   "share": 2.5,
+   "mentioned": 4.8,
+   "position": 5.7
   },
   {
    "engine": "All engines",
-   "answers": 343,
-   "citations": 1067,
-   "cited": 11.7,
-   "data_page": 2.9,
-   "share": 4.5,
-   "mentioned": 7.3,
-   "position": 2.2
+   "answers": 553,
+   "citations": 1559,
+   "cited": 6.7,
+   "data_page": 2.4,
+   "share": 2.8,
+   "mentioned": 6.3,
+   "position": 2.8
   }
  ],
  "trend": [
@@ -77,133 +77,57 @@
      "target": 0.0
     }
    }
+  },
+  {
+   "date": "2026-10-19",
+   "chatgpt": {
+    "cited": 8.5,
+    "data_page": 1.6
+   },
+   "perplexity": {
+    "cited": 3.7,
+    "data_page": 1.6
+   },
+   "google_aio": {
+    "cited": 11.3,
+    "data_page": 8.1
+   },
+   "all": {
+    "cited": 6.7,
+    "data_page": 2.4
+   },
+   "experiment": {
+    "treatment": {
+     "answers": 200,
+     "cited": 2.0,
+     "data_page": 1.5,
+     "target": 1.0
+    },
+    "control": {
+     "answers": 200,
+     "cited": 4.5,
+     "data_page": 1.5,
+     "target": 1.0
+    }
+   }
   }
  ],
  "leaderboard": {
   "ChatGPT": [
    {
-    "brand": "CoinGecko",
-    "type": "Data platform",
-    "cited": 19.0
-   },
-   {
     "brand": "DefiLlama",
     "type": "Data platform",
-    "cited": 15.0
-   },
-   {
-    "brand": "The Block",
-    "type": "The Block",
-    "cited": 12.9
-   },
-   {
-    "brand": "CoinMarketCap",
-    "type": "Data platform",
-    "cited": 11.6
-   },
-   {
-    "brand": "CoinDesk",
-    "type": "Media",
-    "cited": 8.2
-   },
-   {
-    "brand": "BitcoinTreasuries",
-    "type": "Data platform",
-    "cited": 5.4
-   },
-   {
-    "brand": "Glassnode",
-    "type": "Data platform",
-    "cited": 4.1
-   },
-   {
-    "brand": "Yahoo Finance",
-    "type": "Aggregator",
-    "cited": 3.4
-   },
-   {
-    "brand": "Cointelegraph",
-    "type": "Media",
-    "cited": 2.0
-   },
-   {
-    "brand": "Dune",
-    "type": "Data platform",
-    "cited": 1.4
-   },
-   {
-    "brand": "Farside",
-    "type": "Data platform",
-    "cited": 0.7
-   },
-   {
-    "brand": "CoinGlass",
-    "type": "Data platform",
-    "cited": 0.7
-   }
-  ],
-  "Perplexity": [
-   {
-    "brand": "The Block",
-    "type": "The Block",
-    "cited": 10.9
-   },
-   {
-    "brand": "Yahoo Finance",
-    "type": "Aggregator",
-    "cited": 9.5
+    "cited": 18.7
    },
    {
     "brand": "CoinGecko",
     "type": "Data platform",
-    "cited": 8.8
-   },
-   {
-    "brand": "CoinDesk",
-    "type": "Media",
-    "cited": 7.5
-   },
-   {
-    "brand": "CoinMarketCap",
-    "type": "Data platform",
-    "cited": 7.5
-   },
-   {
-    "brand": "CoinGlass",
-    "type": "Data platform",
-    "cited": 0.7
-   }
-  ],
-  "Google AI Overviews": [
-   {
-    "brand": "Yahoo Finance",
-    "type": "Aggregator",
-    "cited": 32.7
-   },
-   {
-    "brand": "DefiLlama",
-    "type": "Data platform",
-    "cited": 18.4
-   },
-   {
-    "brand": "CoinGecko",
-    "type": "Data platform",
-    "cited": 14.3
+    "cited": 16.3
    },
    {
     "brand": "The Block",
     "type": "The Block",
-    "cited": 10.2
-   },
-   {
-    "brand": "CoinMarketCap",
-    "type": "Data platform",
-    "cited": 10.2
-   },
-   {
-    "brand": "KuCoin News",
-    "type": "Aggregator",
-    "cited": 10.2
+    "cited": 8.5
    },
    {
     "brand": "CoinDesk",
@@ -211,159 +135,303 @@
     "cited": 6.1
    },
    {
-    "brand": "BitcoinTreasuries",
+    "brand": "CoinMarketCap",
     "type": "Data platform",
-    "cited": 4.1
+    "cited": 5.7
    },
    {
     "brand": "Glassnode",
     "type": "Data platform",
-    "cited": 2.0
+    "cited": 5.3
+   },
+   {
+    "brand": "BitcoinTreasuries",
+    "type": "Data platform",
+    "cited": 2.8
+   },
+   {
+    "brand": "Yahoo Finance",
+    "type": "Aggregator",
+    "cited": 2.8
+   },
+   {
+    "brand": "Dune",
+    "type": "Data platform",
+    "cited": 1.6
+   },
+   {
+    "brand": "Cointelegraph",
+    "type": "Media",
+    "cited": 1.2
    },
    {
     "brand": "CoinGlass",
     "type": "Data platform",
-    "cited": 2.0
+    "cited": 1.2
+   },
+   {
+    "brand": "Farside",
+    "type": "Data platform",
+    "cited": 0.4
+   },
+   {
+    "brand": "KuCoin News",
+    "type": "Aggregator",
+    "cited": 0.4
+   }
+  ],
+  "Perplexity": [
+   {
+    "brand": "Yahoo Finance",
+    "type": "Aggregator",
+    "cited": 9.8
+   },
+   {
+    "brand": "CoinMarketCap",
+    "type": "Data platform",
+    "cited": 6.9
+   },
+   {
+    "brand": "CoinGecko",
+    "type": "Data platform",
+    "cited": 6.5
+   },
+   {
+    "brand": "CoinDesk",
+    "type": "Media",
+    "cited": 6.1
+   },
+   {
+    "brand": "The Block",
+    "type": "The Block",
+    "cited": 3.7
+   },
+   {
+    "brand": "Dune",
+    "type": "Data platform",
+    "cited": 1.2
+   },
+   {
+    "brand": "BitcoinTreasuries",
+    "type": "Data platform",
+    "cited": 0.8
+   },
+   {
+    "brand": "DefiLlama",
+    "type": "Data platform",
+    "cited": 0.4
+   },
+   {
+    "brand": "KuCoin News",
+    "type": "Aggregator",
+    "cited": 0.4
+   }
+  ],
+  "Google AI Overviews": [
+   {
+    "brand": "Yahoo Finance",
+    "type": "Aggregator",
+    "cited": 38.7
+   },
+   {
+    "brand": "CoinMarketCap",
+    "type": "Data platform",
+    "cited": 16.1
+   },
+   {
+    "brand": "KuCoin News",
+    "type": "Aggregator",
+    "cited": 14.5
+   },
+   {
+    "brand": "The Block",
+    "type": "The Block",
+    "cited": 11.3
+   },
+   {
+    "brand": "CoinGecko",
+    "type": "Data platform",
+    "cited": 11.3
+   },
+   {
+    "brand": "DefiLlama",
+    "type": "Data platform",
+    "cited": 8.1
+   },
+   {
+    "brand": "CoinGlass",
+    "type": "Data platform",
+    "cited": 8.1
+   },
+   {
+    "brand": "CoinDesk",
+    "type": "Media",
+    "cited": 6.5
+   },
+   {
+    "brand": "BitcoinTreasuries",
+    "type": "Data platform",
+    "cited": 4.8
    },
    {
     "brand": "SoSoValue",
     "type": "Data platform",
-    "cited": 2.0
+    "cited": 3.2
+   },
+   {
+    "brand": "BeInCrypto",
+    "type": "Media",
+    "cited": 1.6
+   },
+   {
+    "brand": "Glassnode",
+    "type": "Data platform",
+    "cited": 1.6
+   },
+   {
+    "brand": "Farside",
+    "type": "Data platform",
+    "cited": 1.6
    }
   ],
   "All engines": [
    {
     "brand": "CoinGecko",
     "type": "Data platform",
-    "cited": 14.0
-   },
-   {
-    "brand": "The Block",
-    "type": "The Block",
-    "cited": 11.7
+    "cited": 11.4
    },
    {
     "brand": "Yahoo Finance",
     "type": "Aggregator",
-    "cited": 10.2
-   },
-   {
-    "brand": "CoinMarketCap",
-    "type": "Data platform",
-    "cited": 9.6
+    "cited": 9.9
    },
    {
     "brand": "DefiLlama",
     "type": "Data platform",
-    "cited": 9.0
+    "cited": 9.4
+   },
+   {
+    "brand": "CoinMarketCap",
+    "type": "Data platform",
+    "cited": 7.4
+   },
+   {
+    "brand": "The Block",
+    "type": "The Block",
+    "cited": 6.7
    },
    {
     "brand": "CoinDesk",
     "type": "Media",
-    "cited": 7.6
-   },
-   {
-    "brand": "BitcoinTreasuries",
-    "type": "Data platform",
-    "cited": 2.9
+    "cited": 6.1
    },
    {
     "brand": "Glassnode",
     "type": "Data platform",
-    "cited": 2.0
+    "cited": 2.5
+   },
+   {
+    "brand": "BitcoinTreasuries",
+    "type": "Data platform",
+    "cited": 2.2
    },
    {
     "brand": "KuCoin News",
     "type": "Aggregator",
-    "cited": 1.5
-   },
-   {
-    "brand": "Cointelegraph",
-    "type": "Media",
-    "cited": 0.9
+    "cited": 2.0
    },
    {
     "brand": "CoinGlass",
     "type": "Data platform",
-    "cited": 0.9
+    "cited": 1.4
    },
    {
     "brand": "Dune",
     "type": "Data platform",
-    "cited": 0.6
+    "cited": 1.3
+   },
+   {
+    "brand": "Cointelegraph",
+    "type": "Media",
+    "cited": 0.5
    },
    {
     "brand": "Farside",
     "type": "Data platform",
-    "cited": 0.3
+    "cited": 0.4
    },
    {
     "brand": "SoSoValue",
     "type": "Data platform",
-    "cited": 0.3
+    "cited": 0.4
+   },
+   {
+    "brand": "BeInCrypto",
+    "type": "Media",
+    "cited": 0.2
    }
   ]
  },
  "topics": [
   {
    "topic": "ETFs",
-   "questions": 7,
-   "all": 14.3,
-   "ChatGPT": 14.3,
-   "Perplexity": 14.3,
-   "Google AI Overviews": 14.3,
+   "questions": 14,
+   "all": 12.4,
+   "ChatGPT": 23.8,
+   "Perplexity": 0.0,
+   "Google AI Overviews": 15.4,
    "top_competitor": "Yahoo Finance",
-   "top_competitor_pct": 26.5
+   "top_competitor_pct": 22.7
   },
   {
    "topic": "Treasuries",
    "questions": 5,
-   "all": 20.0,
+   "all": 8.8,
    "ChatGPT": 6.7,
-   "Perplexity": 33.3,
-   "Google AI Overviews": 20.0,
+   "Perplexity": 13.3,
+   "Google AI Overviews": 0.0,
    "top_competitor": "CoinGecko",
-   "top_competitor_pct": 48.6
+   "top_competitor_pct": 44.1
   },
   {
    "topic": "Stablecoins",
-   "questions": 5,
-   "all": 2.9,
-   "ChatGPT": 6.7,
+   "questions": 7,
+   "all": 4.2,
+   "ChatGPT": 9.5,
    "Perplexity": 0.0,
    "Google AI Overviews": 0.0,
-   "top_competitor": "CoinMarketCap",
-   "top_competitor_pct": 42.9
+   "top_competitor": "CoinGecko",
+   "top_competitor_pct": 31.2
   },
   {
    "topic": "Markets",
-   "questions": 7,
-   "all": 4.1,
+   "questions": 13,
+   "all": 4.4,
    "ChatGPT": 0.0,
-   "Perplexity": 9.5,
-   "Google AI Overviews": 0.0,
+   "Perplexity": 5.1,
+   "Google AI Overviews": 15.4,
    "top_competitor": "CoinDesk",
-   "top_competitor_pct": 18.4
+   "top_competitor_pct": 18.7
   },
   {
    "topic": "On-chain",
-   "questions": 10,
-   "all": 4.3,
-   "ChatGPT": 10.0,
+   "questions": 20,
+   "all": 4.6,
+   "ChatGPT": 6.7,
    "Perplexity": 0.0,
-   "Google AI Overviews": 0.0,
+   "Google AI Overviews": 20.0,
    "top_competitor": "DefiLlama",
-   "top_competitor_pct": 10.0
+   "top_competitor_pct": 13.1
   },
   {
    "topic": "DeFi",
-   "questions": 7,
-   "all": 14.3,
-   "ChatGPT": 23.8,
+   "questions": 15,
+   "all": 1.0,
+   "ChatGPT": 2.2,
    "Perplexity": 0.0,
-   "Google AI Overviews": 28.6,
+   "Google AI Overviews": 0.0,
    "top_competitor": "DefiLlama",
-   "top_competitor_pct": 26.5
+   "top_competitor_pct": 26.8
   },
   {
    "topic": "NFTs",
@@ -372,124 +440,124 @@
    "ChatGPT": 0.0,
    "Perplexity": 0.0,
    "Google AI Overviews": 0.0,
-   "top_competitor": "CoinGecko",
+   "top_competitor": "Yahoo Finance",
    "top_competitor_pct": 21.4
   },
   {
    "topic": "Alt. metrics",
    "questions": 6,
-   "all": 31.0,
-   "ChatGPT": 33.3,
-   "Perplexity": 33.3,
+   "all": 21.4,
+   "ChatGPT": 16.7,
+   "Perplexity": 27.8,
    "Google AI Overviews": 16.7,
-   "top_competitor": "CoinGecko",
-   "top_competitor_pct": 9.5
+   "top_competitor": "Yahoo Finance",
+   "top_competitor_pct": 11.9
   }
  ],
  "page_types": [
   {
    "type": "News & newsletters",
-   "citations": 38
-  },
-  {
-   "type": "Data trackers (/treasuries, /etfs, /price)",
-   "citations": 6
+   "citations": 29
   },
   {
    "type": "Data dashboards (/data)",
-   "citations": 4
+   "citations": 9
+  },
+  {
+   "type": "Data trackers (/treasuries, /etfs, /price)",
+   "citations": 5
   }
  ],
  "domains": [
   {
+   "domain": "finance.yahoo.com",
+   "citations": 60
+  },
+  {
    "domain": "coingecko.com",
-   "citations": 51
+   "citations": 60
   },
   {
    "domain": "theblock.co",
-   "citations": 48
-  },
-  {
-   "domain": "finance.yahoo.com",
-   "citations": 38
+   "citations": 43
   },
   {
    "domain": "coinmarketcap.com",
-   "citations": 34
-  },
-  {
-   "domain": "galaxy.com",
-   "citations": 32
-  },
-  {
-   "domain": "defillama.com",
-   "citations": 30
+   "citations": 41
   },
   {
    "domain": "coindesk.com",
-   "citations": 29
+   "citations": 36
   },
   {
-   "domain": "cryptobriefing.com",
-   "citations": 18
+   "domain": "defillama.com",
+   "citations": 35
   },
   {
-   "domain": "sec.gov",
-   "citations": 16
+   "domain": "galaxy.com",
+   "citations": 33
   },
   {
-   "domain": "youtube.com",
-   "citations": 16
+   "domain": "tradingview.com",
+   "citations": 26
   },
   {
-   "domain": "spark.money",
-   "citations": 15
-  },
-  {
-   "domain": "coinlaw.io",
-   "citations": 11
+   "domain": "coinstats.app",
+   "citations": 23
   },
   {
    "domain": "binance.com",
-   "citations": 11
+   "citations": 23
   },
   {
-   "domain": "cftc.gov",
-   "citations": 11
+   "domain": "coinlaw.io",
+   "citations": 17
   },
   {
-   "domain": "ethereum.org",
-   "citations": 11
+   "domain": "cryptoticker.io",
+   "citations": 17
+  },
+  {
+   "domain": "growthepie.com",
+   "citations": 17
+  },
+  {
+   "domain": "coinboss.com",
+   "citations": 16
+  },
+  {
+   "domain": "datawallet.com",
+   "citations": 16
   }
  ],
  "questions": [
   {
-   "id": "etf-01",
-   "question": "How much money flowed into spot Bitcoin ETFs this week?",
+   "id": "etf-05",
+   "question": "How much have XRP ETFs taken in since they launched?",
    "topic": "ETFs",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Yahoo Finance (2)",
-    "KuCoin News (1)",
-    "SoSoValue (1)"
+    "Yahoo Finance (6)",
+    "CoinDesk (1)",
+    "BeInCrypto (1)"
    ],
-   "target": "/data/etfs/bitcoin-etf"
+   "target": "/data/etfs/xrp-etfs"
   },
   {
-   "id": "etf-03",
-   "question": "What are the latest net flows for spot Ethereum ETFs?",
-   "topic": "ETFs",
+   "id": "tre-01",
+   "question": "Which public companies hold the most Bitcoin?",
+   "topic": "Treasuries",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Glassnode (1)",
-    "Farside (1)",
-    "KuCoin News (1)"
+    "CoinGecko (3)",
+    "Yahoo Finance (2)",
+    "BitcoinTreasuries (1)"
    ],
-   "target": "/data/etfs/ethereum-etfs"
+   "target": "/data/treasuries/bitcoin-treasuries"
   },
   {
    "id": "tre-05",
@@ -499,9 +567,9 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinMarketCap (4)",
-    "BitcoinTreasuries (3)",
-    "KuCoin News (1)"
+    "BitcoinTreasuries (6)",
+    "CoinMarketCap (3)",
+    "CoinDesk (2)"
    ],
    "target": "/data/treasuries/crypto-treasuries"
   },
@@ -513,9 +581,9 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinMarketCap (7)",
-    "DefiLlama (4)",
-    "CoinGecko (2)"
+    "CoinGecko (5)",
+    "CoinMarketCap (3)",
+    "DefiLlama (3)"
    ],
    "target": "/data/stablecoins/usd-pegged"
   },
@@ -527,9 +595,9 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinMarketCap (3)",
     "DefiLlama (3)",
-    "CoinGecko (2)"
+    "CoinGecko (1)",
+    "Yahoo Finance (1)"
    ],
    "target": "/data/stablecoins/usd-pegged"
   },
@@ -541,25 +609,11 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinMarketCap (2)",
+    "KuCoin News (2)",
     "CoinGecko (1)",
-    "CoinDesk (1)"
+    "CoinMarketCap (1)"
    ],
    "target": "/data/stablecoins/usd-pegged"
-  },
-  {
-   "id": "stb-04",
-   "question": "What are the largest euro-pegged stablecoins by supply?",
-   "topic": "Stablecoins",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "CoinMarketCap (2)",
-    "DefiLlama (2)",
-    "CoinDesk (1)"
-   ],
-   "target": "/data/stablecoins/non-usd-pegged"
   },
   {
    "id": "mkt-01",
@@ -570,8 +624,8 @@
    "cited_pct": 0.0,
    "winners": [
     "CoinMarketCap (6)",
-    "CoinDesk (3)",
-    "CoinGecko (2)"
+    "CoinGecko (4)",
+    "CoinDesk (3)"
    ],
    "target": "/data/crypto-markets/spot"
   },
@@ -584,10 +638,24 @@
    "cited_pct": 0.0,
    "winners": [
     "CoinDesk (6)",
-    "CoinGecko (2)",
-    "CoinMarketCap (1)"
+    "CoinGecko (4)",
+    "CoinMarketCap (3)"
    ],
    "target": "/data/crypto-markets/spot"
+  },
+  {
+   "id": "mkt-05",
+   "question": "How large is Bitcoin options open interest on Deribit and CME?",
+   "topic": "Markets",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Glassnode (1)",
+    "CoinDesk (1)",
+    "CoinMarketCap (1)"
+   ],
+   "target": "/data/crypto-markets/options"
   },
   {
    "id": "onc-07",
@@ -597,104 +665,11 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinGecko (3)",
-    "DefiLlama (2)",
-    "Yahoo Finance (1)"
+    "CoinGecko (4)",
+    "DefiLlama (3)",
+    "CoinMarketCap (2)"
    ],
    "target": "/data/on-chain-metrics/hyperliquid"
-  },
-  {
-   "id": "dfi-05",
-   "question": "How big is the tokenized real-world assets market?",
-   "topic": "DeFi",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "CoinGecko (2)",
-    "DefiLlama (1)",
-    "CoinDesk (1)"
-   ],
-   "target": "/data/decentralized-finance/real-world-assets"
-  },
-  {
-   "id": "nft-02",
-   "question": "Which NFT marketplace has the most volume, OpenSea or Blur?",
-   "topic": "NFTs",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "CoinGecko (3)",
-    "CoinDesk (3)",
-    "DefiLlama (1)"
-   ],
-   "target": "/data/nft-non-fungible-tokens/marketplaces"
-  },
-  {
-   "id": "etf-05",
-   "question": "How much have XRP ETFs taken in since they launched?",
-   "topic": "ETFs",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "Yahoo Finance (6)",
-    "CoinDesk (2)"
-   ],
-   "target": "/data/etfs/xrp-etfs"
-  },
-  {
-   "id": "etf-06",
-   "question": "Compare BlackRock IBIT and Fidelity FBTC by assets and flows",
-   "topic": "ETFs",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "CoinDesk (1)",
-    "KuCoin News (1)"
-   ],
-   "target": "/data/etfs/etf-comparison"
-  },
-  {
-   "id": "tre-02",
-   "question": "How much Bitcoin do corporate treasuries hold in total?",
-   "topic": "Treasuries",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "BitcoinTreasuries (3)",
-    "CoinGecko (1)"
-   ],
-   "target": "/data/treasuries/bitcoin-treasuries"
-  },
-  {
-   "id": "onc-03",
-   "question": "How much ETH is burned per day and is Ethereum inflationary now?",
-   "topic": "On-chain",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "Yahoo Finance (4)",
-    "Glassnode (1)"
-   ],
-   "target": "/data/on-chain-metrics/ethereum"
-  },
-  {
-   "id": "onc-08",
-   "question": "How many daily active users does Base have?",
-   "topic": "On-chain",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "Cointelegraph (2)",
-    "Dune (1)"
-   ],
-   "target": "/data/on-chain-metrics/base"
   },
   {
    "id": "dfi-03",
@@ -705,9 +680,211 @@
    "cited_pct": 0.0,
    "winners": [
     "DefiLlama (3)",
+    "CoinMarketCap (1)",
     "KuCoin News (1)"
    ],
    "target": "/data/decentralized-finance/cryptocurrency-lending"
+  },
+  {
+   "id": "nft-02",
+   "question": "Which NFT marketplace has the most volume, OpenSea or Blur?",
+   "topic": "NFTs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinDesk (1)",
+    "Dune (1)",
+    "DefiLlama (1)"
+   ],
+   "target": "/data/nft-non-fungible-tokens/marketplaces"
+  },
+  {
+   "id": "alt-03",
+   "question": "How has Google search interest in Bitcoin changed recently?",
+   "topic": "Alt. metrics",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (3)",
+    "CoinDesk (2)",
+    "KuCoin News (1)"
+   ],
+   "target": "/data/alternative-crypto-metrics/web-traffic"
+  },
+  {
+   "id": "stb-06",
+   "question": "How big is the euro stablecoin market compared to USD stablecoins?",
+   "topic": "Stablecoins",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinDesk (2)",
+    "CoinGecko (1)",
+    "Cointelegraph (1)"
+   ],
+   "target": "/data/stablecoins/non-usd-pegged"
+  },
+  {
+   "id": "etf-08",
+   "question": "What are total assets under management in US spot Bitcoin ETFs?",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Farside (1)",
+    "CoinMarketCap (1)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/etfs/bitcoin-etf"
+  },
+  {
+   "id": "mkt-12",
+   "question": "What is the combined market cap of publicly traded crypto companies?",
+   "topic": "Markets",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGecko (4)",
+    "BitcoinTreasuries (1)",
+    "CoinMarketCap (1)"
+   ],
+   "target": "/data/crypto-markets/public-companies"
+  },
+  {
+   "id": "onc-16",
+   "question": "How much fee revenue does Base generate?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGecko (3)",
+    "DefiLlama (3)",
+    "Dune (3)"
+   ],
+   "target": "/data/on-chain-metrics/base"
+  },
+  {
+   "id": "etf-01",
+   "question": "How much money flowed into spot Bitcoin ETFs this week?",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (4)",
+    "KuCoin News (1)"
+   ],
+   "target": "/data/etfs/bitcoin-etf"
+  },
+  {
+   "id": "etf-02",
+   "question": "Which spot Bitcoin ETF has the most assets under management?",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinMarketCap (3)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/etfs/bitcoin-etf"
+  },
+  {
+   "id": "etf-03",
+   "question": "What are the latest net flows for spot Ethereum ETFs?",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Glassnode (1)",
+    "CoinGlass (1)"
+   ],
+   "target": "/data/etfs/ethereum-etfs"
+  },
+  {
+   "id": "etf-06",
+   "question": "Compare BlackRock IBIT and Fidelity FBTC by assets and flows",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinDesk (1)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/etfs/etf-comparison"
+  },
+  {
+   "id": "tre-04",
+   "question": "Which public companies hold Solana on their balance sheet?",
+   "topic": "Treasuries",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGecko (2)",
+    "DefiLlama (1)"
+   ],
+   "target": "/data/treasuries/solana-treasuries"
+  },
+  {
+   "id": "mkt-03",
+   "question": "What is Bitcoin futures open interest right now?",
+   "topic": "Markets",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGlass (2)",
+    "Glassnode (1)"
+   ],
+   "target": "/data/crypto-markets/futures"
+  },
+  {
+   "id": "onc-03",
+   "question": "How much ETH is burned per day and is Ethereum inflationary now?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Glassnode (1)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/on-chain-metrics/ethereum"
+  },
+  {
+   "id": "onc-09",
+   "question": "What are the key on-chain metrics for Avalanche?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (3)",
+    "Dune (1)"
+   ],
+   "target": "/data/on-chain-metrics/avalanche"
+  },
+  {
+   "id": "dfi-06",
+   "question": "What is total value locked in DeFi today?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (4)",
+    "CoinGecko (1)"
+   ],
+   "target": "/data/decentralized-finance/total-value-locked-tvl"
   },
   {
    "id": "dfi-07",
@@ -718,21 +895,74 @@
    "cited_pct": 0.0,
    "winners": [
     "DefiLlama (3)",
-    "CoinGecko (2)"
+    "CoinGecko (1)"
    ],
    "target": "/data/decentralized-finance/derivatives"
   },
   {
-   "id": "mkt-03",
-   "question": "What is Bitcoin futures open interest right now?",
-   "topic": "Markets",
+   "id": "etf-10",
+   "question": "How much ETH do US spot Ethereum ETFs hold?",
+   "topic": "ETFs",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "CoinGlass (2)"
+    "Glassnode (1)",
+    "KuCoin News (1)"
    ],
-   "target": "/data/crypto-markets/futures"
+   "target": "/data/etfs/ethereum-etfs"
+  },
+  {
+   "id": "onc-12",
+   "question": "How many daily active addresses does Ethereum have?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "Glassnode (3)",
+    "Dune (1)"
+   ],
+   "target": "/data/on-chain-metrics/ethereum"
+  },
+  {
+   "id": "dfi-09",
+   "question": "How has DeFi total value locked changed over the past year?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (3)",
+    "CoinGecko (1)"
+   ],
+   "target": "/data/decentralized-finance/total-value-locked-tvl"
+  },
+  {
+   "id": "dfi-13",
+   "question": "Which issuers lead the tokenized real-world asset market?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinMarketCap (3)",
+    "CoinGecko (1)"
+   ],
+   "target": "/data/decentralized-finance/real-world-assets"
+  },
+  {
+   "id": "dfi-15",
+   "question": "What is the open interest on decentralized perpetual exchanges?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (2)",
+    "CoinGecko (1)"
+   ],
+   "target": "/data/decentralized-finance/derivatives"
   },
   {
    "id": "mkt-04",
@@ -747,18 +977,6 @@
    "target": "/data/crypto-markets/futures"
   },
   {
-   "id": "mkt-05",
-   "question": "How large is Bitcoin options open interest on Deribit and CME?",
-   "topic": "Markets",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "Yahoo Finance (1)"
-   ],
-   "target": "/data/crypto-markets/options"
-  },
-  {
    "id": "mkt-07",
    "question": "How has the stock performance of crypto public companies like Coinbase and MicroStrategy compared this year?",
    "topic": "Markets",
@@ -766,7 +984,7 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Yahoo Finance (7)"
+    "Yahoo Finance (5)"
    ],
    "target": "/data/crypto-markets/public-companies"
   },
@@ -778,7 +996,7 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Glassnode (2)"
+    "Glassnode (4)"
    ],
    "target": "/data/on-chain-metrics/bitcoin"
   },
@@ -795,40 +1013,64 @@
    "target": "/data/on-chain-metrics/bitcoin"
   },
   {
-   "id": "onc-04",
-   "question": "How much ETH is staked in total?",
+   "id": "onc-08",
+   "question": "How many daily active users does Base have?",
    "topic": "On-chain",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Glassnode (1)"
+    "Cointelegraph (1)"
    ],
-   "target": "/data/on-chain-metrics/ethereum"
+   "target": "/data/on-chain-metrics/base"
   },
   {
-   "id": "onc-09",
-   "question": "What are the key on-chain metrics for Avalanche?",
-   "topic": "On-chain",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [
-    "DefiLlama (4)"
-   ],
-   "target": "/data/on-chain-metrics/avalanche"
-  },
-  {
-   "id": "dfi-06",
-   "question": "What is total value locked in DeFi today?",
+   "id": "dfi-01",
+   "question": "What is the monthly DEX trading volume?",
    "topic": "DeFi",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "DefiLlama (4)"
+    "DefiLlama (3)"
    ],
-   "target": "/data/decentralized-finance/total-value-locked-tvl"
+   "target": "/data/decentralized-finance/dex-non-custodial"
+  },
+  {
+   "id": "dfi-04",
+   "question": "What is Polymarket's monthly trading volume compared to Kalshi?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/decentralized-finance/prediction-markets"
+  },
+  {
+   "id": "dfi-05",
+   "question": "How big is the tokenized real-world assets market?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/decentralized-finance/real-world-assets"
+  },
+  {
+   "id": "nft-01",
+   "question": "What is monthly NFT trading volume in 2026?",
+   "topic": "NFTs",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (2)"
+   ],
+   "target": "/data/nft-non-fungible-tokens/nft-overview"
   },
   {
    "id": "alt-01",
@@ -838,61 +1080,163 @@
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [
-    "Yahoo Finance (1)"
+    "KuCoin News (1)"
    ],
    "target": "/data/alternative-crypto-metrics/crypto-funding"
   },
   {
-   "id": "alt-03",
-   "question": "How has Google search interest in Bitcoin changed recently?",
-   "topic": "Alt. metrics",
+   "id": "stb-07",
+   "question": "How has EURC supply grown this year?",
+   "topic": "Stablecoins",
    "cited": 0,
-   "answers": 7,
+   "answers": 6,
    "cited_pct": 0.0,
    "winners": [
-    "CoinMarketCap (1)"
+    "CoinGecko (2)"
    ],
-   "target": "/data/alternative-crypto-metrics/web-traffic"
+   "target": "/data/stablecoins/non-usd-pegged"
   },
   {
-   "id": "etf-02",
-   "question": "Which spot Bitcoin ETF has the most assets under management?",
+   "id": "etf-14",
+   "question": "Which XRP ETF issuer has the largest market share?",
    "topic": "ETFs",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
-   "winners": [],
-   "target": "/data/etfs/bitcoin-etf"
+   "winners": [
+    "Yahoo Finance (4)"
+   ],
+   "target": "/data/etfs/xrp-etfs"
   },
   {
-   "id": "onc-05",
-   "question": "How many transactions does Solana process per day?",
-   "topic": "On-chain",
+   "id": "mkt-08",
+   "question": "What was total crypto spot exchange volume last month?",
+   "topic": "Markets",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
-   "winners": [],
+   "winners": [
+    "CoinDesk (7)"
+   ],
+   "target": "/data/crypto-markets/spot"
+  },
+  {
+   "id": "mkt-11",
+   "question": "How large is Ethereum options open interest?",
+   "topic": "Markets",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGlass (2)"
+   ],
+   "target": "/data/crypto-markets/options"
+  },
+  {
+   "id": "mkt-13",
+   "question": "How have crypto mining stocks performed compared to Bitcoin this year?",
+   "topic": "Markets",
+   "cited": 0,
+   "answers": 7,
+   "cited_pct": 0.0,
+   "winners": [
+    "Yahoo Finance (6)"
+   ],
+   "target": "/data/crypto-markets/public-companies"
+  },
+  {
+   "id": "onc-13",
+   "question": "How many daily active addresses does Solana have?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "KuCoin News (1)"
+   ],
    "target": "/data/on-chain-metrics/solana"
   },
   {
-   "id": "onc-06",
-   "question": "Compare Bitcoin, Ethereum and Solana transaction fees and activity",
+   "id": "onc-18",
+   "question": "How much fee revenue does Hyperliquid generate per month?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (3)"
+   ],
+   "target": "/data/on-chain-metrics/hyperliquid"
+  },
+  {
+   "id": "onc-20",
+   "question": "How many active addresses does Avalanche have?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (1)"
+   ],
+   "target": "/data/on-chain-metrics/avalanche"
+  },
+  {
+   "id": "dfi-08",
+   "question": "Which blockchains have the most total value locked in DeFi?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (3)"
+   ],
+   "target": "/data/decentralized-finance/total-value-locked-tvl"
+  },
+  {
+   "id": "dfi-10",
+   "question": "What is Aave's market share of DeFi lending?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (2)"
+   ],
+   "target": "/data/decentralized-finance/cryptocurrency-lending"
+  },
+  {
+   "id": "dfi-11",
+   "question": "How much in total deposits do DeFi lending protocols hold?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "DefiLlama (3)"
+   ],
+   "target": "/data/decentralized-finance/cryptocurrency-lending"
+  },
+  {
+   "id": "dfi-12",
+   "question": "How much tokenized US Treasury debt is on-chain?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [
+    "CoinGecko (1)"
+   ],
+   "target": "/data/decentralized-finance/real-world-assets"
+  },
+  {
+   "id": "onc-04",
+   "question": "How much ETH is staked in total?",
    "topic": "On-chain",
    "cited": 0,
    "answers": 7,
    "cited_pct": 0.0,
    "winners": [],
-   "target": "/data/on-chain-metrics/comparison-bitcoin-ethereum-solana"
-  },
-  {
-   "id": "nft-01",
-   "question": "What is monthly NFT trading volume in 2026?",
-   "topic": "NFTs",
-   "cited": 0,
-   "answers": 7,
-   "cited_pct": 0.0,
-   "winners": [],
-   "target": "/data/nft-non-fungible-tokens/nft-overview"
+   "target": "/data/on-chain-metrics/ethereum"
   },
   {
    "id": "alt-05",
@@ -905,6 +1249,66 @@
    "target": "/data/alternative-crypto-metrics/app-usage"
   },
   {
+   "id": "etf-09",
+   "question": "Which spot Ethereum ETF has the largest assets under management?",
+   "topic": "ETFs",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/etfs/ethereum-etfs"
+  },
+  {
+   "id": "onc-11",
+   "question": "What is Bitcoin's current network hashrate?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/on-chain-metrics/bitcoin"
+  },
+  {
+   "id": "onc-14",
+   "question": "How much revenue do Solana validators earn from fees per month?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/on-chain-metrics/solana"
+  },
+  {
+   "id": "onc-17",
+   "question": "How many users trade on Hyperliquid each day?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/on-chain-metrics/hyperliquid"
+  },
+  {
+   "id": "onc-19",
+   "question": "How many daily transactions does the Avalanche C-Chain process?",
+   "topic": "On-chain",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/on-chain-metrics/avalanche"
+  },
+  {
+   "id": "dfi-14",
+   "question": "Which perpetual DEX has the highest trading volume?",
+   "topic": "DeFi",
+   "cited": 0,
+   "answers": 6,
+   "cited_pct": 0.0,
+   "winners": [],
+   "target": "/data/decentralized-finance/derivatives"
+  },
+  {
    "id": "stb-05",
    "question": "How big is the gold-backed stablecoin market?",
    "topic": "Stablecoins",
@@ -913,69 +1317,57 @@
    "cited_pct": 14.3,
    "winners": [
     "CoinGecko (3)",
-    "CoinMarketCap (1)"
+    "CoinMarketCap (3)",
+    "CoinDesk (1)"
    ],
    "target": "/data/stablecoins/non-fiat-pegged"
   },
   {
-   "id": "dfi-04",
-   "question": "What is Polymarket's monthly trading volume compared to Kalshi?",
+   "id": "stb-04",
+   "question": "What are the largest euro-pegged stablecoins by supply?",
+   "topic": "Stablecoins",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [
+    "CoinMarketCap (4)",
+    "CoinGecko (2)"
+   ],
+   "target": "/data/stablecoins/non-usd-pegged"
+  },
+  {
+   "id": "onc-05",
+   "question": "How many transactions does Solana process per day?",
+   "topic": "On-chain",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [
+    "DefiLlama (3)",
+    "Yahoo Finance (2)"
+   ],
+   "target": "/data/on-chain-metrics/solana"
+  },
+  {
+   "id": "dfi-02",
+   "question": "What is the DEX to CEX spot volume ratio?",
    "topic": "DeFi",
    "cited": 1,
    "answers": 7,
    "cited_pct": 14.3,
    "winners": [
-    "Yahoo Finance (1)"
-   ],
-   "target": "/data/decentralized-finance/prediction-markets"
-  },
-  {
-   "id": "tre-01",
-   "question": "Which public companies hold the most Bitcoin?",
-   "topic": "Treasuries",
-   "cited": 2,
-   "answers": 7,
-   "cited_pct": 28.6,
-   "winners": [
     "CoinGecko (3)",
-    "BitcoinTreasuries (2)",
-    "Yahoo Finance (1)"
+    "CoinDesk (2)"
    ],
-   "target": "/data/treasuries/bitcoin-treasuries"
-  },
-  {
-   "id": "etf-07",
-   "question": "What is the total trading volume of US spot crypto ETFs?",
-   "topic": "ETFs",
-   "cited": 2,
-   "answers": 7,
-   "cited_pct": 28.6,
-   "winners": [
-    "CoinMarketCap (4)",
-    "Yahoo Finance (1)"
-   ],
-   "target": "/data/etfs/crypto-etfs"
-  },
-  {
-   "id": "tre-03",
-   "question": "Which companies have the largest Ethereum treasuries?",
-   "topic": "Treasuries",
-   "cited": 2,
-   "answers": 7,
-   "cited_pct": 28.6,
-   "winners": [
-    "CoinGecko (6)",
-    "BitcoinTreasuries (1)"
-   ],
-   "target": "/data/treasuries/ethereum-treasuries"
+   "target": "/data/decentralized-finance/dex-non-custodial"
   },
   {
    "id": "alt-06",
    "question": "How much has the crypto industry spent on US political donations?",
    "topic": "Alt. metrics",
-   "cited": 2,
+   "cited": 1,
    "answers": 7,
-   "cited_pct": 28.6,
+   "cited_pct": 14.3,
    "winners": [
     "CoinGecko (3)",
     "Yahoo Finance (1)"
@@ -983,16 +1375,104 @@
    "target": "/data/alternative-crypto-metrics/politics"
   },
   {
-   "id": "dfi-01",
-   "question": "What is the monthly DEX trading volume?",
-   "topic": "DeFi",
+   "id": "etf-11",
+   "question": "What is the daily trading volume of spot Solana ETFs?",
+   "topic": "ETFs",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [
+    "CoinGlass (1)",
+    "SoSoValue (1)"
+   ],
+   "target": "/data/etfs/solana-etfs"
+  },
+  {
+   "id": "mkt-09",
+   "question": "Which exchanges have the highest Bitcoin futures open interest?",
+   "topic": "Markets",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [
+    "CoinGlass (1)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/crypto-markets/futures"
+  },
+  {
+   "id": "onc-06",
+   "question": "Compare Bitcoin, Ethereum and Solana transaction fees and activity",
+   "topic": "On-chain",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [],
+   "target": "/data/on-chain-metrics/comparison-bitcoin-ethereum-solana"
+  },
+  {
+   "id": "mkt-10",
+   "question": "What was monthly Bitcoin options trading volume?",
+   "topic": "Markets",
+   "cited": 1,
+   "answers": 7,
+   "cited_pct": 14.3,
+   "winners": [],
+   "target": "/data/crypto-markets/options"
+  },
+  {
+   "id": "tre-03",
+   "question": "Which companies have the largest Ethereum treasuries?",
+   "topic": "Treasuries",
+   "cited": 1,
+   "answers": 6,
+   "cited_pct": 16.7,
+   "winners": [
+    "CoinGecko (5)",
+    "BitcoinTreasuries (1)"
+   ],
+   "target": "/data/treasuries/ethereum-treasuries"
+  },
+  {
+   "id": "onc-15",
+   "question": "How many transactions does Base process per day?",
+   "topic": "On-chain",
+   "cited": 1,
+   "answers": 6,
+   "cited_pct": 16.7,
+   "winners": [
+    "DefiLlama (1)",
+    "Dune (1)"
+   ],
+   "target": "/data/on-chain-metrics/base"
+  },
+  {
+   "id": "etf-04",
+   "question": "How have Solana ETFs performed since launch in terms of inflows?",
+   "topic": "ETFs",
    "cited": 2,
    "answers": 7,
    "cited_pct": 28.6,
    "winners": [
-    "DefiLlama (2)"
+    "Yahoo Finance (4)",
+    "Farside (1)",
+    "KuCoin News (1)"
    ],
-   "target": "/data/decentralized-finance/dex-non-custodial"
+   "target": "/data/etfs/solana-etfs"
+  },
+  {
+   "id": "tre-02",
+   "question": "How much Bitcoin do corporate treasuries hold in total?",
+   "topic": "Treasuries",
+   "cited": 2,
+   "answers": 7,
+   "cited_pct": 28.6,
+   "winners": [
+    "CoinGecko (5)",
+    "BitcoinTreasuries (3)",
+    "Yahoo Finance (1)"
+   ],
+   "target": "/data/treasuries/bitcoin-treasuries"
   },
   {
    "id": "mkt-06",
@@ -1005,18 +1485,14 @@
    "target": "/data/crypto-markets/cme-cots"
   },
   {
-   "id": "tre-04",
-   "question": "Which public companies hold Solana on their balance sheet?",
-   "topic": "Treasuries",
-   "cited": 3,
+   "id": "etf-13",
+   "question": "What are the latest daily net flows for XRP ETFs?",
+   "topic": "ETFs",
+   "cited": 2,
    "answers": 7,
-   "cited_pct": 42.9,
-   "winners": [
-    "CoinGecko (7)",
-    "BitcoinTreasuries (1)",
-    "Yahoo Finance (1)"
-   ],
-   "target": "/data/treasuries/solana-treasuries"
+   "cited_pct": 28.6,
+   "winners": [],
+   "target": "/data/etfs/xrp-etfs"
   },
   {
    "id": "onc-10",
@@ -1026,34 +1502,20 @@
    "answers": 7,
    "cited_pct": 42.9,
    "winners": [
-    "CoinDesk (6)",
-    "CoinMarketCap (2)",
-    "DefiLlama (1)"
+    "CoinDesk (5)",
+    "Yahoo Finance (1)"
    ],
    "target": "/data/on-chain-metrics/robinhood-chain"
   },
   {
-   "id": "dfi-02",
-   "question": "What is the DEX to CEX spot volume ratio?",
-   "topic": "DeFi",
-   "cited": 4,
-   "answers": 7,
-   "cited_pct": 57.1,
-   "winners": [
-    "CoinGecko (4)",
-    "CoinDesk (1)"
-   ],
-   "target": "/data/decentralized-finance/dex-non-custodial"
-  },
-  {
-   "id": "etf-04",
-   "question": "How have Solana ETFs performed since launch in terms of inflows?",
+   "id": "etf-12",
+   "question": "Which Solana ETF has the most assets?",
    "topic": "ETFs",
-   "cited": 5,
+   "cited": 3,
    "answers": 7,
-   "cited_pct": 71.4,
+   "cited_pct": 42.9,
    "winners": [
-    "Yahoo Finance (4)"
+    "Yahoo Finance (1)"
    ],
    "target": "/data/etfs/solana-etfs"
   },
@@ -1061,21 +1523,33 @@
    "id": "alt-04",
    "question": "How many SEC filings mention blockchain or crypto?",
    "topic": "Alt. metrics",
-   "cited": 5,
+   "cited": 3,
    "answers": 7,
-   "cited_pct": 71.4,
+   "cited_pct": 42.9,
    "winners": [],
    "target": "/data/alternative-crypto-metrics/web-traffic"
+  },
+  {
+   "id": "etf-07",
+   "question": "What is the total trading volume of US spot crypto ETFs?",
+   "topic": "ETFs",
+   "cited": 4,
+   "answers": 7,
+   "cited_pct": 57.1,
+   "winners": [
+    "CoinMarketCap (4)"
+   ],
+   "target": "/data/etfs/crypto-etfs"
   },
   {
    "id": "alt-02",
    "question": "How has crypto VC funding trended over the last few years?",
    "topic": "Alt. metrics",
-   "cited": 6,
+   "cited": 5,
    "answers": 7,
-   "cited_pct": 85.7,
+   "cited_pct": 71.4,
    "winners": [
-    "CoinDesk (1)",
+    "CoinMarketCap (2)",
     "Cointelegraph (1)",
     "CoinGecko (1)"
    ],
@@ -1087,16 +1561,16 @@
   "week0": null,
   "groups": {
    "treatment": {
-    "answers": 98,
-    "cited": 0.0,
-    "data_page": 0.0,
-    "target": 0.0
+    "answers": 200,
+    "cited": 2.0,
+    "data_page": 1.5,
+    "target": 1.0
    },
    "control": {
-    "answers": 91,
-    "cited": 5.5,
-    "data_page": 0.0,
-    "target": 0.0
+    "answers": 200,
+    "cited": 4.5,
+    "data_page": 1.5,
+    "target": 1.0
    }
   },
   "pairs": [
@@ -1111,8 +1585,8 @@
     },
     "control": {
      "page": "/data/stablecoins/non-usd-pegged",
-     "answers": 7,
-     "cited": 0.0,
+     "answers": 20,
+     "cited": 5.0,
      "data_page": 0.0,
      "target": 0.0
     }
@@ -1121,14 +1595,14 @@
     "topic": "etfs",
     "treatment": {
      "page": "/data/etfs/ethereum-etfs",
-     "answers": 7,
+     "answers": 20,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/etfs/bitcoin-etf",
-     "answers": 14,
+     "answers": 21,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
@@ -1138,16 +1612,16 @@
     "topic": "etfs",
     "treatment": {
      "page": "/data/etfs/xrp-etfs",
-     "answers": 7,
-     "cited": 0.0,
-     "data_page": 0.0,
-     "target": 0.0
+     "answers": 21,
+     "cited": 9.5,
+     "data_page": 9.5,
+     "target": 4.8
     },
     "control": {
      "page": "/data/etfs/solana-etfs",
-     "answers": 7,
-     "cited": 71.4,
-     "data_page": 0.0,
+     "answers": 21,
+     "cited": 28.6,
+     "data_page": 4.8,
      "target": 0.0
     }
    },
@@ -1155,31 +1629,31 @@
     "topic": "markets",
     "treatment": {
      "page": "/data/crypto-markets/spot",
-     "answers": 14,
+     "answers": 21,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/crypto-markets/futures",
-     "answers": 14,
-     "cited": 0.0,
-     "data_page": 0.0,
-     "target": 0.0
+     "answers": 21,
+     "cited": 4.8,
+     "data_page": 4.8,
+     "target": 4.8
     }
    },
    {
     "topic": "markets",
     "treatment": {
      "page": "/data/crypto-markets/options",
-     "answers": 7,
-     "cited": 0.0,
-     "data_page": 0.0,
-     "target": 0.0
+     "answers": 21,
+     "cited": 4.8,
+     "data_page": 4.8,
+     "target": 4.8
     },
     "control": {
      "page": "/data/crypto-markets/public-companies",
-     "answers": 7,
+     "answers": 21,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
@@ -1189,14 +1663,14 @@
     "topic": "onchain",
     "treatment": {
      "page": "/data/on-chain-metrics/bitcoin",
-     "answers": 14,
+     "answers": 20,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/on-chain-metrics/ethereum",
-     "answers": 14,
+     "answers": 20,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
@@ -1206,31 +1680,31 @@
     "topic": "onchain",
     "treatment": {
      "page": "/data/on-chain-metrics/base",
-     "answers": 7,
-     "cited": 0.0,
+     "answers": 19,
+     "cited": 5.3,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/on-chain-metrics/solana",
-     "answers": 7,
-     "cited": 0.0,
-     "data_page": 0.0,
-     "target": 0.0
+     "answers": 19,
+     "cited": 5.3,
+     "data_page": 5.3,
+     "target": 5.3
     }
    },
    {
     "topic": "onchain",
     "treatment": {
      "page": "/data/on-chain-metrics/avalanche",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/on-chain-metrics/hyperliquid",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
@@ -1240,14 +1714,14 @@
     "topic": "defi",
     "treatment": {
      "page": "/data/decentralized-finance/cryptocurrency-lending",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/decentralized-finance/total-value-locked-tvl",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
@@ -1257,14 +1731,14 @@
     "topic": "defi",
     "treatment": {
      "page": "/data/decentralized-finance/derivatives",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
     },
     "control": {
      "page": "/data/decentralized-finance/real-world-assets",
-     "answers": 7,
+     "answers": 19,
      "cited": 0.0,
      "data_page": 0.0,
      "target": 0.0
